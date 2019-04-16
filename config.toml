@@ -1,5 +1,5 @@
 # Title of your site
-title = "University of Melbourne Center for Cancer Research"
+title = "UMCCR Genomics Platform Group"
 baseurl = "https://umccr.org/"
 
 # Enter a copyright notice to display in the site footer.
@@ -18,7 +18,7 @@ disqusShortname = ""
 
 # Name of Academic theme folder in `themes/`.
 theme = "academic"
-color_theme = "default"
+color_theme = "ocean"
 
 # Get last modified date for content from Git?
 enableGitInfo = false
