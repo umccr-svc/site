@@ -5,11 +5,11 @@
 #   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `cupcake`.
 color_theme = "coffee"
 # Enable users to switch between day and night mode?
-day_night = true
+day_night = false 
 
 # Font style.
 #   Choose from `default`, `classic`, or `playfair`.
-font = "playfair"
+font = "default"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
 description = "University of Melbourne Center for Cancer Research"
