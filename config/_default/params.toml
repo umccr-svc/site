@@ -3,7 +3,7 @@
 
 # Color theme.
 #   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `cupcake`.
-color_theme = "coffee"
+color_theme = "ocean"
 # Enable users to switch between day and night mode?
 day_night = false 
 
@@ -12,7 +12,7 @@ day_night = false
 font = "default"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = "University of Melbourne Center for Cancer Research"
+description = "University of Melbourne Center for Cancer Research Genomics Platform Group"
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
 sharing_image = ""
