@@ -12,7 +12,7 @@ tags:
   - umccr
 ---
 
-# The Genomics Platform Group [Revised
+# The Genomics Platform Group
 
 With a growing need for data management, analysis and research computing support – in particular due to the unprecedented growth of sequencing data – researchers and clinicians will benefit from community-driven, reusable approaches to process, analyse and aggregate large-scale sequencing data.
 
