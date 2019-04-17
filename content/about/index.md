@@ -21,7 +21,7 @@ Led by Associate Professor [Oliver Hofmann](https://www.findanexpert.unimelb.edu
 * Peter Diakumis
 * Lavinia Gordon
 * Oliver Hofmann
-* Sehrish Kanal
+* Sehrish Kanwal
 * Florian Reisinger
 * Vlad Saveliev
 * Roman Valls
