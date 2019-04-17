@@ -12,11 +12,9 @@ tags:
   - umccr
 ---
 
-# The Genomics Platform Group
-
 With a growing need for data management, analysis and research computing support – in particular due to the unprecedented growth of sequencing data – researchers and clinicians will benefit from community-driven, reusable approaches to process, analyse and aggregate large-scale sequencing data.
 
-Led by Associate Professor [Oliver Hofmann](https://www.findanexpert.unimelb.edu.au/display/person786652), the Genomics Platform Team is developing, testing, and applying accredited bioinformatics workflows to patient data and  large scale research projects, evaluating new technologies at a rapid pace.  The team is focused on improved scalability and reliability of sequencing workflows, better detection of changes in cancer genomes, and aims to make tumour data, especially molecular data, from medical institutions and other organisations, accessible for research use in real time.
+Led by Associate Professor [Oliver Hofmann](https://www.findanexpert.unimelb.edu.au/display/person786652), the **Genomics Platform Group** is developing, testing, and applying accredited bioinformatics workflows to patient data and  large scale research projects, evaluating new technologies at a rapid pace.  The team is focused on improved scalability and reliability of sequencing workflows, better detection of changes in cancer genomes, and aims to make tumour data, especially molecular data, from medical institutions and other organisations, accessible for research use in real time.
 
 ## The Team
 
