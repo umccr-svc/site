@@ -10,8 +10,6 @@ tags:
   - hiring
 ---
 
-## Work with us
-
 We regularly have open positions, but even when we are not actively advertising we are interested in talking to you if the work we do is of interest to you. 
 
 All positions that we offer are funded for three years and offer 17% superannuation. Working hours are flexible, and remote or part-time work can be negotiated. The University is an equal opportunity employer and does not discriminate on the basis of race, religion, colour, national origin, gender, sexual orientation, age, marital status, or disability status.
@@ -30,5 +28,5 @@ As part of the team you will work with national and international partners, focu
 
 The Centre has established a Genomics Innovation Hub, a Melbourne Medical Precinct-wide initiative, which partners with leaders in the genomic technology industry to rapidly develop and deploy disruptive molecular profiling technologies best suited to decoding cancer samples for our local research community. We are exploring the use of linked reads such as [10X / Chromium](https://www.10xgenomics.com/) to improve structural variation detection and using single-cell technologies to study tumour evolution. Exploring how to best apply long read technologies is next on the list, courtesy of a local [Promethion](https://www.bioplatforms.com/australian-genome-research-facility-ltd/).
 
-Feel free to reach out to Oliver on Twitter (@fiamh) or via email (<oliver.hofmann@unimelb.edu.au>) with any questions.
+Feel free to reach out to Oliver on Twitter ([@fiamh](https://twitter.com/fiamh)) or via email (<oliver.hofmann@unimelb.edu.au>) with any questions.
 
