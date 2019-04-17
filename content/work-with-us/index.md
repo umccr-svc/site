@@ -22,7 +22,7 @@ As part of the team you will work with national and international partners, focu
 
 * help us migrate our data management capabilities to Amazon Web Services
 * work with us porting [bcbio-nextgen](https://bcbio-nextgen.readthedocs.io/en/latest/), our HTS workflow system, to the [Common Workflow Language](https://bcbio-nextgen.readthedocs.io/en/latest/)
-* * collaborate with our collaborators at Illumina, The Broad Institute and across the [Global Alliance for Genomics & Health](https://www.ga4gh.org/) (GA4GH) to define, implement and test [data processing and dissemination methods](https://github.com/ga4gh/wiki/wiki)
+* collaborate with our partners at Illumina, The Broad Institute and across the [Global Alliance for Genomics & Health](https://www.ga4gh.org/) (GA4GH) to define, implement and test [data processing and dissemination methods](https://github.com/ga4gh/wiki/wiki)
 * coordinate with the European Bioinformatics Institute and the GA4GH's [Large Scale Genomics' team](https://github.com/ga4gh/large-scale-genomics-wiki/wiki) on the development of [Local EGA](https://localega.readthedocs.io/en/latest/)
 * improve our whole genome and transcriptome workflows  
 
