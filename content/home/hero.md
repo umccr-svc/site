@@ -43,14 +43,13 @@ hero_media = ""
   url = "https://sourcethemes.com/academic/"
   label = "Meet the Team"
 
-#[cta_alt2]
-#  url = "https://sourcethemes.com/academic/"
-#  label = "Work with Us"
-
+[cta_alt]
+  url = "https://sourcethemes.com/academic/"
+  label = "Work with Us"
 
 # Note. An optional note to show underneath the links.
-#[cta_note]
-#  label = '<a id="umccr-github" href="https://github.com/umccr">Github<!-- V --></a>'
+[cta_note]
+  label = '<a id="umccr-github" href="https://github.com/umccr">Github<!-- V --></a>'
 +++
 
 We develop community-driven, reusable approaches to process, analyse and aggregate large-scale sequencing data to improve cancer diagnostics and therapeutic choices.
