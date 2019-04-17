@@ -1,5 +1,5 @@
 ---
-title: Amazon for the Integrated Genome Browser (IGV)
+title: Amazon for the Integrative Genomics Viewer (IGV)
 author: Roman Valls Guimera
 date: "2019-02-16"
 slug: igv-amazon
