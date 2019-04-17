@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 5  # Order that this section will appear.
 
-title = "Academic"
+title = "TBA"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
 hero_media = ""
@@ -49,8 +49,8 @@ hero_media = ""
 
 
 # Note. An optional note to show underneath the links.
-[cta_note]
-  label = '<a id="umccr-github" href="https://github.com/umccr">Github<!-- V --></a>'
+#[cta_note]
+#  label = '<a id="umccr-github" href="https://github.com/umccr">Github<!-- V --></a>'
 +++
 
 We develop community-driven, reusable approaches to process, analyse and aggregate large-scale sequencing data to improve cancer diagnostics and therapeutic choices.
