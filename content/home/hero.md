@@ -33,23 +33,27 @@ hero_media = ""
 # Call to action links (optional).
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
-[cta]
-  url = "https://sourcethemes.com/academic/docs/install/"
-  label = "Get Started"
-  icon_pack = "fas"
-  icon = "download"
+#[cta]
+#  url = "https://sourcethemes.com/academic/docs/install/"
+#  label = "Meet the teamed"
+#  icon_pack = "fas"
+#  icon = "download"
   
 [cta_alt]
   url = "https://sourcethemes.com/academic/"
-  label = "View Documentation"
+  label = "Meet the Team"
+
+[cta_alt]
+  url = "https://sourcethemes.com/academic/"
+  label = "Work with Us"
+
 
 # Note. An optional note to show underneath the links.
 [cta_note]
-  label = '<a id="academic-release" href="https://sourcethemes.com/academic/updates" data-repo="gcushen/hugo-academic">Latest release <!-- V --></a>'
+  label = '<a id="umccr-github" href="https://github.com/umccr">Github<!-- V --></a>'
 +++
 
-**The Best Way to Create the Website You Want from Markdown (or RStudio/Jupyter)**
+We develop community-driven, reusable approaches to process, analyse and aggregate large-scale sequencing data to improve cancer diagnostics and therapeutic choices.
 
-Build **Anything** with Widgets
 
-<span style="text-shadow: none;"><a class="github-button" href="https://github.com/gcushen/hugo-academic" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star</a><script async defer src="https://buttons.github.io/buttons.js"></script></span>
+
