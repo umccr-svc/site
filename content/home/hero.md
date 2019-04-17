@@ -39,11 +39,11 @@ hero_media = ""
 #  icon_pack = "fas"
 #  icon = "download"
   
-[cta_alt]
+[cta_alt1]
   url = "https://sourcethemes.com/academic/"
   label = "Meet the Team"
 
-[cta_alt]
+[cta_alt2]
   url = "https://sourcethemes.com/academic/"
   label = "Work with Us"
 
