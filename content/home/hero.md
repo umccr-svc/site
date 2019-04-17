@@ -8,7 +8,7 @@ weight = 5  # Order that this section will appear.
 title = ""
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
-hero_media = ""
+hero_media = "desktop-proxy.jpg"
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -39,13 +39,13 @@ hero_media = ""
 #  icon_pack = "fas"
 #  icon = "download"
   
-[cta_alt1]
+[cta_alt]
   url = "https://sourcethemes.com/academic/"
   label = "Meet the Team"
 
-[cta_alt2]
-  url = "https://sourcethemes.com/academic/"
-  label = "Work with Us"
+#[cta_alt2]
+#  url = "https://sourcethemes.com/academic/"
+#  label = "Work with Us"
 
 
 # Note. An optional note to show underneath the links.
