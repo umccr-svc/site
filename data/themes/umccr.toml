@@ -5,7 +5,8 @@ name = "umccr"
 light = true
 
 # Primary
-primary = "#328cc1"
+#primary = "#328cc1"
+primary = "#00FF00"
 primary_light = "#328cc1"
 primary_dark = "#DA2536"
 
@@ -16,7 +17,6 @@ menu_text_active = "#328cc1"
 menu_title = "#fff"
 
 # Backgrounds
-#background = "#fff"
-background = "#00FF00"
+background = "#fff"
 home_section_odd = "#fff"
 home_section_even = "#f7f7f7"
