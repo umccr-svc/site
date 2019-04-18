@@ -19,3 +19,7 @@ menu_title = "#D8DEE9"
 background = "#ECEFF4"
 home_section_odd = "#E5E9F0"
 home_section_even = "#ECEFF4"
+
+# Links
+link = "#D08770"
+link_hover = "#BF616A"
