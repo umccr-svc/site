@@ -13,7 +13,7 @@ primary_dark = "#5E81AC"
 menu_primary = "#4C566A"
 menu_text = "#ECEFF4"
 menu_text_active = "#81A1C1"
-menu_title = "#D8DEE9"
+menu_title = "#81A1C1"
 
 # Backgrounds
 background = "#ECEFF4"
@@ -21,5 +21,5 @@ home_section_odd = "#E5E9F0"
 home_section_even = "#ECEFF4"
 
 # Links
-link = "#D08770"
-link_hover = "#BF616A"
+link = "#5E81AC"
+link_hover = "#8FBCBB"
