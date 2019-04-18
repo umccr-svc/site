@@ -11,6 +11,7 @@ categories:
 tags:
   - bioinformatics
   - igv
+summary: "On expanding the Broad's Integrative Genomics Viewer (IGV) to read input directly from AWS S3."
 ---
 
 TL;DR: https://github.com/igvteam/igv/pull/620

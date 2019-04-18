@@ -12,7 +12,7 @@ tags:
   - minimap2
   - bwa-mem
   - variant-calling
-summary: "Test-2-3"
+summary: "We evaluate differences between bwa-mem and minimap2-aligned reads for somatic variant calling."
 ---
 
 We evaluated WGS somatic variant calling from alignment data by two aligners: Minimap2 and BWA-MEM. Our goal was to understand if we can replace slower BWA-MEM with Minimap2 in our cancer variant calling analysis pipleine in UMCCR.
