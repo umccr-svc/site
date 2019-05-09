@@ -1,7 +1,23 @@
-## Panel of normals
+---
+title: "Panel of normals"
+author: Vlad Saveliev
+date: "2019-04-16"
+slug: panel-of-normals
+layout: post
+permalink: https://umccr.org/blog/2019/04/16/panel-of-normals
+categories:
+  - bioinformatics
+tags:
+  - bioinformatics
+  - variant-calling
+  - variant-filtering
+  - somatic-variants
+summary: "Building a panel of unrelated normals to filter somatic variant calls from artefacts and germline leakage."
+---
+
 To distinguish germline mutations from somatic in tumor, the common practice is to rely a matched normal - a sample from healthy tissue (typically blood) of the same individual. However, often a matched normal is sequenced in a lower depth, which, coupled with an uneven coverage (due to low/high GC or unbalanced structural variants), may lead to coverage gaps and otherwise problematic regions. Sometimes a matched normal may not be available at all (e.g. due to lack of funds or simply sample availability). And even a good matched normal can't always help with sequencing or mapping artifacts in tumor.
 
-![](/img/2019/05/panel_of_normals/mollusk.png)
+![](/img/2019/04/panel_of_normals/mollusk.png)
 _Mollusks have no blood, so if you are treating one, getting a matched blood normal might be a problem._
 
 Therefore, to distinguish somatic mutations, researchers additionally rely on (1) public variant databases and (2) a set of in-house unrelated normal genomes (so called panel of normals) sequenced using similar technology and preparation method. The former helps with missed germline variants common in a population in general, while the panel additionally aids in removing recurrent technical artifacts. 
@@ -23,13 +39,13 @@ Hartwig Medical Foundation in its pipeline [use 2 separate panels of normals](ht
 
 We compared the performance for both germline and tumor-normal approaches on [ICGC MB benchmark](https://www.nature.com/articles/ncomms10001) (T/N calls from medulloblastoma tumor. We tried to maximize the F2 measure (which balances out "recall" - how many true variants we found, and precision - what percent of out yield is actually true).
 
-![](/img/2019/05/panel_of_normals/FD8F575E-9580-4032-BB42-625910692035%202.png)
+![](/img/2019/04/panel_of_normals/FD8F575E-9580-4032-BB42-625910692035%202.png)
 
 The best value is achieved with the tumor-only approach to building the panel.
 
 We can also see that the optimal threshold of hits in PoN would be around 5, meaning that we should build the panel of variants supported by at least 5 normal samples:
 
-![](/img/2019/05/panel_of_normals/000025.png)
+![](/img/2019/04/panel_of_normals/000025.png)
 
 ### Combining and matching
 Because variants can be represented differently, especially indels, complex and multiallelic variants, we normalize both normal calls when building the panel, and target tumor calls before searching for hits. [Specifically](https://github.com/umccr/vcf_stuff#vcf-normalisation):
@@ -47,13 +63,13 @@ Since there is a possibility that even the position of such event may vary, it m
 ### Normal coverage gaps
 We expect the panel to primarily aid in regions of lower normal coverage, or where there is some non-0 support of a normal variant. To figure this out, we compare distributions of normal depth and normal allele frequency in PoN variants and in non-PoN variants.
 
-![](/img/2019/05/panel_of_normals/00002c.png)
+![](/img/2019/04/panel_of_normals/00002c.png)
 
 We see that the PoN variants corresponds to lower depth and lower AF in normal match, than other variants, which is expected. 
 
 To do this analysis, we don't need a benchmark dataset, thus we can make similar histograms for our research samples to evaluate the PoN in a more realistic setting.  This pattern replicates on most of the patients (first 6 rows):
 
-![](/img/2019/05/panel_of_normals/00000d%202.png)
+![](/img/2019/04/panel_of_normals/00000d%202.png)
 
 We also did this exercise to "true" and "called" variants sets of the ICGC MB and COLO829 benchmarks separately, expecting the coverage difference to be less clear for the "true" calls as it should contain fewer artifacts and germline leakage (the remaining rows).
 
@@ -61,7 +77,7 @@ We can also define the "failed" normal locus as the one with coverage below <30x
 
 We also calculated the same metric for variants filtered with gnomAD, to compare how PoN is helpful versus the population databases. We can see that both PoN and gnomAD mostly filter sites of failed normal coverage, and that also they only partially overlap in their filtering power.
 
-![](/img/2019/05/panel_of_normals/10ECB3DF-D4C7-4AF1-82CF-A921B060EB2C%202.png)
+![](/img/2019/04/panel_of_normals/10ECB3DF-D4C7-4AF1-82CF-A921B060EB2C%202.png)
 
 In sum, the panel of normals proves to be useful for filtering of in-house samples, and the result does not diminish in combination with population filtering with gnomAD.
 
