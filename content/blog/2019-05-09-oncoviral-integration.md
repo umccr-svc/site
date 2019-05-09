@@ -87,7 +87,7 @@ In our case, the integration events might have led to the following sequence (re
 
 Papillomavirus genome can be divided into three regions: an early region that encodes six common ORFs E1, E2, E4, E5, E6 and E7, a late region coding ORFs L1 and L2, and a long control region that holds the origin of replication and transcription factor binding sites [[Williams et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3037184/)]. 
 
-<img src="img/HPV18-genome-The-circular-dsDNA-genome-of-HPV18-7-857-bp-is-shown-Viral-open-reading.png" alt="HPV circular genes" style="width: 200px;"/>
+<img src="/img/2019/05/oncoviral-integration/HPV18-genome-The-circular-dsDNA-genome-of-HPV18-7-857-bp-is-shown-Viral-open-reading.png" alt="HPV circular genes" "/>
 
 Two viral oncoproteins, E6 and E7 are attributed with the ability of evading the immune system and using the host cell replication machinery to survive [[Scheurer et al.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1525-1438.2005.00246.x)]. Those genes inactivate two tumor suppressor proteins, p53 (by E6) and pRb family (by E7) [[Chaturvedi et al.](https://link.springer.com/chapter/10.1007%2F978-1-4419-1472-9_5)], and are mainly associated with malignancies.
 
