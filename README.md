@@ -1,12 +1,22 @@
 # UMCCR website
 
-In order to view your changes locally, just use:
+IMPORTANT: Clone this repo with `--recursive`, otherwise the themes will not be pulled and the builds will fail.
 
-```
-./view.sh
+```bash
+$ git clone --recursive https://github.com/umccr-svc/site
 ```
 
-Unless you are using RStudio+blogdown Addin already. Then just git push and the changes should be live at:
+## Where to place my content
+
+Drop your `.md` files under `content/` and the images under `static/img/<YEAR>/<MONTH>`. Use common sense and use the already published content as a template.
+
+In order to view your changes locally (before pushing it live), just use:
+
+```bash
+$ ./view.sh
+```
+
+Unless you are using RStudio+blogdown Addin already. Then just git push and the changes should be visible at:
 
 https://umccr.org/
 
