@@ -3,3 +3,4 @@ public/
 .Rhistory
 resources
 *~
+.Rproj.user
