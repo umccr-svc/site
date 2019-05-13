@@ -24,6 +24,11 @@
   weight = 20
 
 [[main]]
+  name = "Code of Conduct"
+  url = "code"
+  weight = 30
+
+[[main]]
   name = "Contact"
   url = "#contact"
   weight = 60
