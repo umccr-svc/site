@@ -3,4 +3,5 @@ public/
 .Rhistory
 resources
 *~
+.Rproj.user
 .DS_Store
