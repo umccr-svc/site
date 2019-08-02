@@ -9,19 +9,19 @@
 #  weight = 10
 
 [[main]]
-  name = "Blog"
-  url = "blog"
-  weight = 20
-
-[[main]]
   name = "About Us"
   url = "about"
   weight = 15
 
 [[main]]
+  name = "Blog"
+  url = "blog"
+  weight = 20
+
+[[main]]
   name = "Opportunities"
   url = "work-with-us"
-  weight = 20
+  weight = 25
 
 [[main]]
   name = "Code of Conduct"
