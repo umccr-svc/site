@@ -33,7 +33,7 @@ We are located in the heart of the [Melbourne Biomedical Precinct](https://www.m
 
 ## Perks of the job?
 
-Both roles come with 17% superannuation, and Melbourne University staff members have access to [extensive sports facilities](http://www.sport.unimelb.edu.au/fitnesscentres#Locations) and many [other benefits](https://about.unimelb.edu.au/careers/staff-benefits) . We offer flexible working arrangements including working from home. Applications for part-time work are welcome!
+The role comes with 17% superannuation, and Melbourne University staff members have access to [extensive sports facilities](http://www.sport.unimelb.edu.au/fitnesscentres#Locations) and many [other benefits](https://about.unimelb.edu.au/careers/staff-benefits). We offer flexible working arrangements including working from home. Applications for part-time work are welcome!
 
 ## Tell me more!
 
