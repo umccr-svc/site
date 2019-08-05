@@ -16,7 +16,7 @@ tags:
 summary: "We have an opening for an experience bioinformatician to work on WGS/WTS workflows and accreditation."
 ---
 
-We have a new opening for a [Bioinformatician](http://jobs.unimelb.edu.au/caw/en/job/899782/bioinformatician-genomic-medicine) , Genomic Medicine (PSC 8 - $103,409 -$111,927 p.a.).
+We have a new opening for a [Bioinformatician](http://jobs.unimelb.edu.au/caw/en/job/899782/bioinformatician-genomic-medicine), Genomic Medicine (PSC 8 - $103,409 -$111,927 p.a.).
 
 ## What would I be doing?
 
@@ -25,7 +25,7 @@ We are looking for a bioinformatician who will provide vital support to the [UoM
 
 ## Who am I going to work with?
 
-The team is inclusive and diverse, spans the whole range from biologists over bioinformaticians to software engineers, with junior and senior members. We collaborate with a number of international groups, e.g., the Broad Institute ( [Data Biosphere](https://medium.com/@benedictpaten/a-data-biosphere-for-biomedical-research-d212bbfae95d) ), Genomics England ( [National Initiatives](https://broadinstitute.swoogo.com/national-initiatives-2019/236753) ), and global initiatives such as the Global Alliance for Genomics Health ( [GA4GH](https://www.ga4gh.org/) ). This particular role will work in close collaboration with Illumina.
+The team is inclusive and diverse, spans the whole range from biologists over bioinformaticians to software engineers, with junior and senior members. We collaborate with a number of international groups, e.g., the Broad Institute ([Data Biosphere](https://medium.com/@benedictpaten/a-data-biosphere-for-biomedical-research-d212bbfae95d)), Genomics England ([National Initiatives](https://broadinstitute.swoogo.com/national-initiatives-2019/236753)), and global initiatives such as the Global Alliance for Genomics Health ([GA4GH](https://www.ga4gh.org/)). This particular role will work in close collaboration with Illumina.
 
 ## Where are you located?
 
@@ -37,4 +37,4 @@ The role comes with 17% superannuation, and Melbourne University staff members h
 
 ## Tell me more!
 
-Applications close August 28th 2019. For further information contact Oliver at [oliver.hofmann@unimelb.edu.au](mailto:oliver.hofmann@unimelb.edu.au) or via Twitter ([@fiamh](https://twitter.com/fiamh?lang=en)).
+Applications close August 28th, 2019. For further information contact Oliver at [oliver.hofmann@unimelb.edu.au](mailto:oliver.hofmann@unimelb.edu.au) or via Twitter ([@fiamh](https://twitter.com/fiamh?lang=en)).
