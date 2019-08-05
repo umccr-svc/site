@@ -10,7 +10,7 @@ tags:
   - hiring
 ---
 
-We have [open positions](https://umccr.org/blog/hiring-2019/) (closing June 2nd 2019), but even when we are not actively advertising we are interested in talking to you if the work we do is of interest to you. 
+We have an [open position for a bioinformatician](http://jobs.unimelb.edu.au/caw/en/job/899782/bioinformatician-genomic-medicine) (closing August 28th 2019), but even when we are not actively advertising we are interested in talking to you if the work we do is of interest to you. 
 
 All positions that we offer are funded for three years and offer 17% superannuation. Working hours are flexible, and remote or part-time work can be negotiated. The University is an equal opportunity employer and does not discriminate on the basis of race, religion, colour, national origin, gender, sexual orientation, age, marital status, or disability status.
 
