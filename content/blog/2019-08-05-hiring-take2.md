@@ -29,7 +29,7 @@ The team is inclusive and diverse, spans the whole range from biologists over bi
 
 ## Where are you located?
 
-We are located in the heart of the [Melbourne Biomedical Precinct](https://www.melbournebiomed.com/) , with our office space in the [VCCC](https://www.viccompcancerctr.org/) – join us and this could be the [view from your desk](https://pbs.twimg.com/media/CiOHOayUUAEdG2D.jpg) . During the day you can enjoy a cup of coffee [on the terrace](https://www.designinc.com.au/cms_uploads/images/611_vccc-4.jpg) , or take a stroll around [Royal Park](https://en.wikipedia.org/wiki/Royal_Park,_Melbourne) .
+We are located in the heart of the [Melbourne Biomedical Precinct](https://www.melbournebiomed.com/) , with our office space in the [VCCC](https://www.viccompcancerctr.org/) – join us and this could be the [view from your desk](https://pbs.twimg.com/media/CiOHOayUUAEdG2D.jpg) . During the day you can enjoy a cup of coffee [on the terrace](https://plenarygroup.com/news-and-media/news/2016/parkvilles-new-rooftop-park-set-to-become-a-new-benchmark-for-melbourne) , or take a stroll around [Royal Park](https://en.wikipedia.org/wiki/Royal_Park,_Melbourne) .
 
 ## Perks of the job?
 
