@@ -178,6 +178,17 @@ For instance, one could use the following custom policy attached to the authenti
             "Resource": [
                 "arn:aws:s3:::*"
             ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "mobileanalytics:PutEvents",
+                "cognito-sync:*",
+                "cognito-identity:*"
+            ],
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }
