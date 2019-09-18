@@ -244,7 +244,8 @@ are editing is all the instructions to allow it to connect to Cognito.
    "authorization_endpoint": "https://igv-demo.auth.ap-southeast-2.amazoncognito.com/login",
    "token_endpoint": "https://igv-demo.auth.ap-southeast-2.amazoncognito.com/token",
    "aws_cognito_fed_pool_id": "ap-southeast-2:15b7bf93-18ca-40d5-99e9-38b4eb69363e",
-   "aws_cognito_pool_id": "ap-southeast-2_IYMvlZzmv"
+   "aws_cognito_pool_id": "ap-southeast-2_IYMvlZzmv",
+   "aws_cognito_role_arn": "arn:aws:iam::YOUR_AWS_ACCOUNT:role/YOUR_Cognito_igvAuth_Role"
 }
 ```
 
