@@ -18,9 +18,9 @@ summary: "Setting up a secure Amazon Cognito and S3 backend for IGV desktop"
 
 This is our first guest blogpost graciously contributed by [Andrew Patterson](https://github.com/andrewpatto) from [Melbourne Genomics](http://melbournegenomics.org.au/) who is [deploying this IGV solution in Melbourne to medical scientists](https://github.com/igvteam/igv/pull/620#issuecomment-510362122).
 
-~~Before we dive in, it is important to note that until [@igvteam](https://github.com/igvteam/) merges in [pullrequest #620](https://github.com/igvteam/igv/pull/620), the functionality we describe here **works only with AWS UMCCR IGV temporary fork**, freely available [here](https://github.com/umccr/igv/releases).
+~~Before we dive in, it is important to note that until [@igvteam](https://github.com/igvteam/) merges in [pullrequest #620](https://github.com/igvteam/igv/pull/620), the functionality we describe here **works only with AWS UMCCR IGV temporary fork**, freely available [here](https://github.com/umccr/igv/releases).~~
 
-Your regular IGV installation does not have this functionality included, yet. [We are actively working with Jim Robinson and his team at the Broad Institute to get it merged into IGV proper](https://github.com/igvteam/igv/pull/620).~~
+~~Your regular IGV installation does not have this functionality included, yet. [We are actively working with Jim Robinson and his team at the Broad Institute to get it merged into IGV proper](https://github.com/igvteam/igv/pull/620).~~
 
 **AMAZON CHANGES MERGED UPSTREAM on 2019-09-11 !!!**
 
