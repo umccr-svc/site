@@ -24,6 +24,8 @@ This is our first guest blogpost graciously contributed by [Andrew Patterson](ht
 
 **AMAZON CHANGES MERGED UPSTREAM on 2019-09-11 !!!**
 
+Therefore, **IGV versions >= 2.7.0 incorporate the AWS functionality outlined below.**
+
 # AWS backend deployment step by step
 
 IGV desktop has had a feature added [as described on an earlier UMCCR's blogpost about IGV](https://umccr.org/blog/igv-amazon/) to support to use of BAMs in S3 storage by using native AWS authorization and authentication to access the bioinformatics data.
