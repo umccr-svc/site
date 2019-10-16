@@ -256,20 +256,7 @@ The config file you are editing contains all the instructions to allow it to con
 }
 ```
 
-Of the above settings, some are seemingly arbitrary (unused?) values. This includes
-* ```apiKey``` 
-* ```project_id```.
-
-Other settings are fixed for the scenario we have (a full Cognito solution in ap-southeast-2). These include
-* ```auth_provider```
-* ```auth_provider_x509_cert_url```
-* ```aws_region``` 
-* ```scope``` 
-* ```redirect_uris``` (is a fixed value unless
- someone has changed the listening port inside IGV)
- 
- All the other settings in the config **must be set to values that are unique to your particular installation (there is no point copying the values directly from the example JSON!)**. These values come directly from various stages in our User Pool and Identity Pool creation. To help
- match where the values come from - you can go back through the above screen shots - and look for red text
+Settings in the config **must be set to values that are unique to your particular installation (there is no point copying the values directly from the example JSON!)**. These values come directly from various stages in our User Pool and Identity Pool creation. To help match where the values come from - you can go back through the above screen shots - and look for red text
  ```(key)``` to show where directly in the AWS Console the values have come from.
  
 
