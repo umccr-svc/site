@@ -221,7 +221,7 @@ Note: there are no special permissions on this bucket - it is a private bucket j
 Cognito - thereby showing that private BAM files can be accessed. Obviously the S3 permissions model allows
 use much more flexible scenarios, including cross account bucket sharing.
 
-## [OAuth provisioning URL](#igv-url-provisioning)
+## [OAuth provisioning URL][#igv-url-provisioning]
 
 Finally we need to bring all these settings together in IGV to allow
 it to trigger the authentication process. For this, you should host a file
