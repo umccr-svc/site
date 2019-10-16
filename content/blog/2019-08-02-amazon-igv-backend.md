@@ -24,7 +24,7 @@ This is our first guest blogpost graciously contributed by [Andrew Patterson](ht
 
 **AMAZON CHANGES MERGED UPSTREAM on 2019-09-11 !!!**
 
-Therefore, **IGV versions >= 2.7.0 incorporate the AWS functionality outlined below.**
+Therefore, **IGV versions >= 2.7.1 incorporate the AWS functionality outlined below.**
 
 # AWS backend deployment step by step
 
@@ -224,11 +224,14 @@ use much more flexible scenarios, including cross account bucket sharing.
 ## IGV's oauth-config.json file
 
 Finally we need to bring all these settings together in IGV to allow
-it to trigger the authentication process. Locate (or create) a file
-called ```oauth-config.json``` in your igv directory. On a Mac - the igv directory
-is automatically created in your home directory when IGV runs - and is used to
-store preferences and reference genome files etc. The config file you
-are editing is all the instructions to allow it to connect to Cognito.
+it to trigger the authentication process. For this, you should host a file
+called ```oauth-config.json.gz``` on a public http server. For convenience, one could just
+create a [S3 bucket with CloudFront hosting](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-access-to-amazon-s3/)
+the json file contents below, compressed with gzip. Once the file can be accessed publicly, [respecting AWS guidelines for safe public S3 buckets](https://aws.amazon.com/blogs/aws/amazon-s3-block-public-access-another-layer-of-protection-for-your-accounts-and-buckets/), please paste that public URL on IGV's `View-\>Preferences-\>Advanced-\>OAuth provisioning URL`, as shown in this screenshot:
+
+![igv provisioning URL](igv-oauth-config-json-provisioning.png)
+
+The config file you are editing contains all the instructions to allow it to connect to Cognito:
 
 ```json
 {
