@@ -18,13 +18,17 @@ summary: "Setting up a secure Amazon Cognito and S3 backend for IGV desktop"
 
 This is our first guest blogpost graciously contributed by [Andrew Patterson](https://github.com/andrewpatto) from [Melbourne Genomics](http://melbournegenomics.org.au/) who is [deploying this IGV solution in Melbourne to medical scientists](https://github.com/igvteam/igv/pull/620#issuecomment-510362122).
 
-Before we dive in, it is important to note that until [@igvteam](https://github.com/igvteam/) merges in [pullrequest #620](https://github.com/igvteam/igv/pull/620), the functionality we describe here **works only with AWS UMCCR IGV temporary fork**, freely available [here](https://github.com/umccr/igv/releases).
+~~Before we dive in, it is important to note that until [@igvteam](https://github.com/igvteam/) merges in [pullrequest #620](https://github.com/igvteam/igv/pull/620), the functionality we describe here **works only with AWS UMCCR IGV temporary fork**, freely available [here](https://github.com/umccr/igv/releases).~~
 
-Your regular IGV installation does not have this functionality included, yet. [We are actively working with Jim Robinson and his team at the Broad Institute to get it merged into IGV proper](https://github.com/igvteam/igv/pull/620).
+~~Your regular IGV installation does not have this functionality included, yet. [We are actively working with Jim Robinson and his team at the Broad Institute to get it merged into IGV proper](https://github.com/igvteam/igv/pull/620).~~
 
-# IGV-AWS backend deployment step by step
+**AMAZON CHANGES MERGED UPSTREAM on 2019-09-11 !!!**
 
-UMCCR's IGV desktop has had a feature added [as described on an earlier UMCCR's blogpost about IGV](https://umccr.org/blog/igv-amazon/) to support to use of BAMs in S3 storage by using native AWS authorization and authentication to access the bioinformatics data.
+Therefore, **IGV versions >= 2.7.1 incorporate the AWS functionality outlined below.**
+
+# AWS backend deployment step by step
+
+IGV desktop has had a feature added [as described on an earlier UMCCR's blogpost about IGV](https://umccr.org/blog/igv-amazon/) to support to use of BAMs in S3 storage by using native AWS authorization and authentication to access the bioinformatics data.
 
 
 This means that S3 URIs such as:
@@ -178,6 +182,17 @@ For instance, one could use the following custom policy attached to the authenti
             "Resource": [
                 "arn:aws:s3:::*"
             ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "mobileanalytics:PutEvents",
+                "cognito-sync:*",
+                "cognito-identity:*"
+            ],
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }
@@ -206,14 +221,17 @@ Note: there are no special permissions on this bucket - it is a private bucket j
 Cognito - thereby showing that private BAM files can be accessed. Obviously the S3 permissions model allows
 use much more flexible scenarios, including cross account bucket sharing.
 
-## IGV's oauth-config.json file
+## [OAuth provisioning URL][#igv-url-provisioning]
 
 Finally we need to bring all these settings together in IGV to allow
-it to trigger the authentication process. Locate (or create) a file
-called ```oauth-config.json``` in your igv directory. On a Mac - the igv directory
-is automatically created in your home directory when IGV runs - and is used to
-store preferences and reference genome files etc. The config file you
-are editing is all the instructions to allow it to connect to Cognito.
+it to trigger the authentication process. For this, you should host a file
+called ```oauth-config.json.gz``` on a public http server. For convenience, one could just
+create a [S3 bucket with CloudFront hosting](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-access-to-amazon-s3/)
+the json file contents below, compressed with gzip. Once the file can be accessed publicly, [respecting AWS guidelines for safe public S3 buckets](https://aws.amazon.com/blogs/aws/amazon-s3-block-public-access-another-layer-of-protection-for-your-accounts-and-buckets/), please paste that public URL on IGV's `View->Preferences->Advanced->OAuth provisioning URL`, as shown in this screenshot:
+
+![igv provisioning URL](/img/2019/08/igv-oauth-config-json-provisioning.png)
+
+The config file you are editing contains all the instructions to allow it to connect to Cognito:
 
 ```json
 {
@@ -233,24 +251,12 @@ are editing is all the instructions to allow it to connect to Cognito.
    "authorization_endpoint": "https://igv-demo.auth.ap-southeast-2.amazoncognito.com/login",
    "token_endpoint": "https://igv-demo.auth.ap-southeast-2.amazoncognito.com/token",
    "aws_cognito_fed_pool_id": "ap-southeast-2:15b7bf93-18ca-40d5-99e9-38b4eb69363e",
-   "aws_cognito_pool_id": "ap-southeast-2_IYMvlZzmv"
+   "aws_cognito_pool_id": "ap-southeast-2_IYMvlZzmv",
+   "aws_cognito_role_arn": "arn:aws:iam::YOUR_AWS_ACCOUNT:role/YOUR_Cognito_igvAuth_Role"
 }
 ```
 
-Of the above settings, some are seemingly arbitrary (unused?) values. This includes
-* ```apiKey``` 
-* ```project_id```.
-
-Other settings are fixed for the scenario we have (a full Cognito solution in ap-southeast-2). These include
-* ```auth_provider```
-* ```auth_provider_x509_cert_url```
-* ```aws_region``` 
-* ```scope``` 
-* ```redirect_uris``` (is a fixed value unless
- someone has changed the listening port inside IGV)
- 
- All the other settings in the config **must be set to values that are unique to your particular installation (there is no point copying the values directly from the example JSON!)**. These values come directly from various stages in our User Pool and Identity Pool creation. To help
- match where the values come from - you can go back through the above screen shots - and look for red text
+Settings in the config **must be set to values that are unique to your particular installation (there is no point copying the values directly from the example JSON!)**. These values come directly from various stages in our User Pool and Identity Pool creation. To help match where the values come from - you can go back through the above screen shots - and look for red text
  ```(key)``` to show where directly in the AWS Console the values have come from.
  
 

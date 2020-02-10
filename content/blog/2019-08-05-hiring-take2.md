@@ -13,7 +13,7 @@ tags:
  - jobs
  - australia
 
-summary: "We have an opening for an experience bioinformatician to work on WGS/WTS workflows and accreditation."
+summary: "We have an opening for an experienced bioinformatician to work on WGS/WTS workflows and accreditation."
 ---
 
 We have a new opening for a [Bioinformatician](http://jobs.unimelb.edu.au/caw/en/job/899782/bioinformatician-genomic-medicine), Genomic Medicine (PSC 8 - $103,409 -$111,927 p.a.).
