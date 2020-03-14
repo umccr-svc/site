@@ -146,7 +146,7 @@ spots in the AWS Console UI - but can be seen easily when we go to 'Edit Identit
 Last but not least, AWS Cognito has an issue with user tracking that can only be circumvented by [activating the "Basic (Classic) Auth Flow"](https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html).
 Do not worry, this technical detail only means that, as an administrator you will be able to track your user's actions on CloudTrail. [With the Enhanced Auth Flow, properly auditing users is currently not possible at the time of writing this (March 2020)](https://github.com/igvteam/igv/pull/691). In practice this means that you should enable the following on your Identity Pools:
 
-![identity basic auth flow](/img/2019/08/igv-auth-flow-settings.png)
+![identity basic auth flow](/img/2019/08/igv_auth_flow_settings.png)
 
 Otherwise, the following error message will show up on your IGV desktop console log:
 
