@@ -24,7 +24,7 @@ This is our first guest blogpost graciously contributed by [Andrew Patterson](ht
 
 **AMAZON CHANGES MERGED UPSTREAM on 2019-09-11 !!!**
 
-**IGV versions >= 2.8.11 incorporate the AWS functionality outlined below.**
+**IGV versions >= 2.8.12 incorporate the AWS functionality outlined below.**
 
 # AWS backend deployment step by step
 
