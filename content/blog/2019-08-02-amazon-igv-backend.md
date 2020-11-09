@@ -24,7 +24,7 @@ This is our first guest blogpost graciously contributed by [Andrew Patterson](ht
 
 **AMAZON CHANGES MERGED UPSTREAM on 2019-09-11 !!!**
 
-Therefore, **IGV versions >= 2.7.1 incorporate the AWS functionality outlined below.**
+**IGV versions >= 2.8.12 incorporate the AWS functionality outlined below.**
 
 Note authenticated access is currently restricted to the following file formats:
 
@@ -151,6 +151,15 @@ Finally for the Identity Pool - we need to find the newly created Identity Pool 
 spots in the AWS Console UI - but can be seen easily when we go to 'Edit Identity Pool'.
 
 ![identity pool edited](/img/2019/08/identity_pool_edit.png)
+
+Last but not least, AWS Cognito has an issue with user tracking that can only be circumvented by [activating the "Basic (Classic) Auth Flow"](https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html).
+Do not worry, this technical detail only means that, as an administrator you will be able to track your user's actions on CloudTrail. [With the Enhanced Auth Flow, properly auditing users is currently not possible at the time of writing this (March 2020)](https://github.com/igvteam/igv/pull/691). In practice this means that you should enable the following on your Identity Pools:
+
+![identity basic auth flow](/img/2019/08/igv_auth_flow_settings.png)
+
+Otherwise, the following error message will show up on your IGV desktop console log:
+
+> ERROR [2020-03-13T11:12:48,706] [OAuthProvider.java:240]  software.amazon.awssdk.services.cognitoidentity.model.InvalidParameterException: Basic (classic) flow is not enabled, please use enhanced flow. (Service: CognitoIdentity, Status Code: 400, Request ID: 119beb3a-d75e-442d-b72d-1ed320fb7df8)
 
 
 ## Roles and policies
