@@ -26,6 +26,15 @@ This is our first guest blogpost graciously contributed by [Andrew Patterson](ht
 
 Therefore, **IGV versions >= 2.7.1 incorporate the AWS functionality outlined below.**
 
+Note authenticated access is currently restricted to the following file formats:
+
+* BAM
+* CRAM
+* tabix indexed VCF (vcf.gz / vcf.gz.tbi)
+* non-indexed feature file formats
+
+[There is work in progress to support other formats such as BigWig in the near future][other_igv_formats].
+
 # AWS backend deployment step by step
 
 IGV desktop has had a feature added [as described on an earlier UMCCR's blogpost about IGV](https://umccr.org/blog/igv-amazon/) to support to use of BAMs in S3 storage by using native AWS authorization and authentication to access the bioinformatics data.
@@ -278,3 +287,5 @@ If all has gone well you should be able to see the BAM content as if the file wa
 sitting locally on your computer.
 
 ![igv bam loaded](/img/2019/08/igv_loaded.png)
+
+[other_igv_formats]: https://github.com/igvteam/igv/issues/856
