@@ -12,6 +12,7 @@ tags:
   - variant-calling
   - variant-filtering
   - somatic-variants
+  - testing
 summary: "Building a panel of unrelated normals to filter somatic variant calls from artefacts and germline leakage."
 ---
 
@@ -20,9 +21,9 @@ To distinguish germline mutations from somatic in tumor, the common practice is 
 ![](/img/2019/04/panel_of_normals/mollusk.png)
 _Mollusks have no blood, so if you are treating one, getting a matched blood normal might be a problem._
 
-Therefore, to distinguish somatic mutations, researchers additionally rely on (1) public variant databases and (2) a set of in-house unrelated normal genomes (so called panel of normals) sequenced using similar technology and preparation method. The former helps with missed germline variants common in a population in general, while the panel additionally aids in removing recurrent technical artifacts. 
+Therefore, to distinguish somatic mutations, researchers additionally rely on (1) public variant databases and (2) a set of in-house unrelated normal genomes (so called panel of normals) sequenced using similar technology and preparation method. The former helps with missed germline variants common in a population in general, while the panel additionally aids in removing recurrent technical artifacts.
 
-In UMCCR, we use both method. We rely upon the [gnomAD](https://gnomad.broadinstitute.org) database as a public germline mutation source, by removing matching variants that occur with at least 5% population frequency in any ancestry. And as a source of in-house normals, we constructed a panel of matched normals from tumor/normal experiments done within past 18 months, which comprise 230 blood samples from healthy (non-cancer) unrelated individuals, all sequenced using the same protocol as we apply to tumor tissues. 
+In UMCCR, we use both method. We rely upon the [gnomAD](https://gnomad.broadinstitute.org) database as a public germline mutation source, by removing matching variants that occur with at least 5% population frequency in any ancestry. And as a source of in-house normals, we constructed a panel of matched normals from tumor/normal experiments done within past 18 months, which comprise 230 blood samples from healthy (non-cancer) unrelated individuals, all sequenced using the same protocol as we apply to tumor tissues.
 
 When preparing the panel, we tried to answer the following questions:
 
@@ -33,9 +34,9 @@ When preparing the panel, we tried to answer the following questions:
 * How does the panel compare with public databases like gnomAD?
 
 ### Normal variant calling
-As part of our standard pipeline, we call germline varaints in each normal sample (using GATK-haplotype, Vardict, and Strelka2, as well a 2-of-3 ensemble approach of all). 
+As part of our standard pipeline, we call germline varaints in each normal sample (using GATK-haplotype, Vardict, and Strelka2, as well a 2-of-3 ensemble approach of all).
 
-Hartwig Medical Foundation in its pipeline [use 2 separate panels of normals](https://www.biorxiv.org/content/biorxiv/early/2018/09/20/415133.full.pdf): one is built from germline calls by GATK-haplotype, another is from Strelka lower frequency calls to tackle Strelka specific artefacts. Broad Institute [recommends](https://gatkforums.broadinstitute.org/gatk/discussion/11053/panel-of-normals-pon) [running](https://software.broadinstitute.org/gatk/documentation/tooldocs/4.beta.1/org_broadinstitute_hellbender_tools_walkers_mutect_CreateSomaticPanelOfNormals.php) Mutect2 somatic caller in tumor-only mode. [Matt Eldridge](/https://bioinformatics-core-shared-training.github.io/cruk-summer-school-2017/Day3/somatic_snv_filtering.html#25/) also called variants with a lower frequency of at least 5%. 
+Hartwig Medical Foundation in its pipeline [use 2 separate panels of normals](https://www.biorxiv.org/content/biorxiv/early/2018/09/20/415133.full.pdf): one is built from germline calls by GATK-haplotype, another is from Strelka lower frequency calls to tackle Strelka specific artefacts. Broad Institute [recommends](https://gatkforums.broadinstitute.org/gatk/discussion/11053/panel-of-normals-pon) [running](https://software.broadinstitute.org/gatk/documentation/tooldocs/4.beta.1/org_broadinstitute_hellbender_tools_walkers_mutect_CreateSomaticPanelOfNormals.php) Mutect2 somatic caller in tumor-only mode. [Matt Eldridge](/https://bioinformatics-core-shared-training.github.io/cruk-summer-school-2017/Day3/somatic_snv_filtering.html#25/) also called variants with a lower frequency of at least 5%.
 
 We compared the performance for both germline and tumor-normal approaches on [ICGC MB benchmark](https://www.nature.com/articles/ncomms10001) (T/N calls from medulloblastoma tumor. We tried to maximize the F2 measure (which balances out "recall" - how many true variants we found, and precision - what percent of out yield is actually true).
 
@@ -58,14 +59,14 @@ When combining normal variants or when matching against tumor, we ignore the act
 
 Since there is a possibility that even the position of such event may vary, it might make sense to relax the criteria further. [Hartwig Medical Foundation pipeline](https://www.biorxiv.org/content/biorxiv/early/2018/09/20/415133.full.pdf) removes all indels surrounding a PoN indel:
 
-> Regions of complex haplotype alterations are often called as multiple long indels which can make it more difficult to construct an effective PON, and sometimes we find residual artefacts at these locations. Hence we also filter inserts or deletes which are 3 bases or longer where there is a PoN filtered indel of 3 bases or longer within 10 bases in the same sample.  
+> Regions of complex haplotype alterations are often called as multiple long indels which can make it more difficult to construct an effective PON, and sometimes we find residual artefacts at these locations. Hence we also filter inserts or deletes which are 3 bases or longer where there is a PoN filtered indel of 3 bases or longer within 10 bases in the same sample.
 
 ### Normal coverage gaps
 We expect the panel to primarily aid in regions of lower normal coverage, or where there is some non-0 support of a normal variant. To figure this out, we compare distributions of normal depth and normal allele frequency in PoN variants and in non-PoN variants.
 
 ![](/img/2019/04/panel_of_normals/00002c.png)
 
-We see that the PoN variants corresponds to lower depth and lower AF in normal match, than other variants, which is expected. 
+We see that the PoN variants corresponds to lower depth and lower AF in normal match, than other variants, which is expected.
 
 To do this analysis, we don't need a benchmark dataset, thus we can make similar histograms for our research samples to evaluate the PoN in a more realistic setting.  This pattern replicates on most of the patients (first 6 rows):
 
@@ -86,5 +87,3 @@ The code for the panel generation is written using Snakemake and stored on the G
 ```
 pon_anno test.vcf.gz -g GRCh37 -o test.PoN.vcf.gz --panel-of-normals-dir /path/to/the_panel
 ```
-
-
