@@ -1,7 +1,7 @@
 ---
 title: "About Us"
 author: Oliver Hofmann
-date: "2019-04-17"
+date: "2020-12-20"
 #slug: about
 layout: post
 #categories:
@@ -18,24 +18,26 @@ Led by Associate Professor [Oliver Hofmann](https://www.findanexpert.unimelb.edu
 
 ## The Team
 
-* Peter Diakumis
 * Lavinia Gordon
 * Oliver Hofmann
 * Sehrish Kanwal
+* Alexis Lucattini
+* Victor San Kho Lin
 * Florian Reisinger
-* Vlad Saveliev
 * Roman Valls
 
+![](/img/stairs.jpg)
 
-### Students
 
-* Parisa Ahmadloo
-* Ayesha Ahmed
-* Dafu Ai
+### Former Group Members
+
+* Peter Diakumis (MacArthur Lab)
+* Vlad Savelyev (MacArthur Lab)
+* Nick Clark (Elastic)
 
 
 ## The Centre for Cancer Research
 
 The Genomics Platform Group is part of the [University of Melbourne Centre for Cancer Research](https://research.unimelb.edu.au/centre-for-cancer-research/home) (UMCCR), led by Professor [Sean Grimmond](https://www.findanexpert.unimelb.edu.au/display/person773948). The UMCCR has the mission to improve cancer patient outcome through genome discovery, translation and personalised medicine. It seeks to achieve this by advancing the molecular detection & diagnosis of cancer, prioritising therapeutic selection via Computational Oncology, and enabling programs in personalised cancer care.
 
-Spanning more than 5000 square meters the UMCCR provides specialist laboratories for cancer cell biology, DNA biobanking, rapid large scale, HTS sequencing and organoid generation and testing. Once fully occupied, the Centre is expected to house more than 260 researchers. It is part of the [Victorian Comprehensive Cancer Centre](https://www.viccompcancerctr.org/) located in the [Melbourne Biomedical Precinct](https://www.melbournebiomed.com), an environment for more than 25 health services, academic research institutes and startups. The Centre has recently announced a [partnership with Illumina](https://about.unimelb.edu.au/newsroom/news/2019/february/illumina-partnership-to-drive-genomics-innovation-in-australia) to accelerate genomics innovation in cancer research.
+Spanning more than 5000 square meters the UMCCR provides specialist laboratories for cancer cell biology, DNA biobanking, rapid large scale, HTS sequencing and organoid generation and testing. Once fully occupied, the Centre is expected to house more than 260 researchers. It is part of the [Victorian Comprehensive Cancer Centre](https://www.viccompcancerctr.org/) located in the [Melbourne Biomedical Precinct](https://www.melbournebiomed.com), an environment for more than 25 health services, academic research institutes and startups. The Centre has recently announced the [Illumina - University of Melbourne Genomics Hub](https://mdhs.unimelb.edu.au/centre-for-cancer-research/our-research/precision-oncology-research-group/illumina-partnership) program, a $60 million initiative to to accelerate genomics innovation in cancer research.
