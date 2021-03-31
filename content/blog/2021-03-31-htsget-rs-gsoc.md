@@ -104,7 +104,6 @@ Since Rust libraries in our field are currently developing, this project has a s
 
 1. Noodles
 1. AWS Rust Lambda Runtime
-1. Paperclip (OpenAPIv3)
 1. Rust-S3 (as a **temporal** replacement to Rusoto).
 1. RustLS (as a **permanent** replacement to OpenSSL).
 
