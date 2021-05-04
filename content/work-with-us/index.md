@@ -10,7 +10,7 @@ tags:
   - hiring
 ---
 
-As part of the new [University of Melbourne - Illumina Genomics Hub](https://mdhs.unimelb.edu.au/centre-for-cancer-research/our-research/precision-oncology-research-group/illumina-partnership) we regularly have new job openings. You will be involved in the rapid analysis and management of whole genome and transcriptome sequencing of cancer patients and we can offer a fantastic work environment. Please see the [Genomics Hub](https://umccr.org/blog/hub-jobs/) post for more information about the positions and the involved work.
+As part of the new [University of Melbourne - Illumina Genomics Hub](https://mdhs.unimelb.edu.au/centre-for-cancer-research/our-research/precision-oncology-research-group/illumina-partnership) we regularly have new job openings. You will be involved in the rapid analysis and management of whole genome, transcriptome and ctDNA sequencing data of cancer patients to aid in the diagnosis and treatment process. Please see the [Genomics Hub](https://umccr.org/blog/hub-jobs/) post for more information about the positions and the involved work.
 
 **All positions that we offer are funded for at least two years and offer 17% superannuation. Working hours are flexible, remote work is a given and part-time work can be negotiated.** The University is an equal opportunity employer and does not discriminate on the basis of race, religion, colour, national origin, gender, sexual orientation, age, marital status, or disability status.
 
