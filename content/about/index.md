@@ -23,8 +23,10 @@ Led by Associate Professor [Oliver Hofmann](https://www.findanexpert.unimelb.edu
 * Sehrish Kanwal
 * Alexis Lucattini
 * Victor San Kho Lin
+* Helen Mitchell
 * Florian Reisinger
 * Roman Valls
+* Stephen Watts
 
 ![](/img/stairs.jpg)
 
