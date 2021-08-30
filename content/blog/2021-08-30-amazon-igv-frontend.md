@@ -1,6 +1,24 @@
+---
+title: "IGV frontend (desktop client) setup"
+author: Roman Valls Guimera 
+date: "2021-08-30"
+slug: igv-amazon-frontend-setup
+layout: post
+permalink: https://umccr.org/blog/2021/08/30/igv-amazon-frontend-setup
+categories:
+ - bioinformatics 
+ - infrastructure
+tags:
+ - bioinformatics
+ - igv
+summary: "Adding the Amazon provisioning URL to IGV desktop"
+---
+
 # Integrative Genomics Viewer for AWS Cloud
 
-At UMCCR, we use AWS to access the BAM and VCF files. Other ways of accessing data are discouraged for security and practical reasons.
+This blogpost assumes assumes that you have your AWS infrastrucure already in place, if not, read the [Amazon IGV backend setup](https://umccr.org/blog/igv-amazon-backend-setup/).
+
+At UMCCR, we use AWS to access the BAM and VCF files. Other ways of accessing data are discouraged for security and practical reasons... unless you use IGV.js or other browser-based systems, which are preferred.
 
 ### Use Amazon
 
