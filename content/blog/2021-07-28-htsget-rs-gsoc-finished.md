@@ -27,7 +27,7 @@ The [Rust htsget server][htsget_rs] that was sketched [a few months ago at UMCCR
 After a bit of a struggle finding suitable candidates:
 
 <!-- https://twitter.com/braincode/status/1379773467604647936?s=20 -->
-<% twitter 1379773467604647936 %>
+{{< tweet 1379773467604647936 >}}
 
 The work carried by [Daniel Castillo de la Rosa][castillodel] and [Marko Malenic][mmalenic1] with the mentoring supervision of [Christian Pérez-Llamas][chris-zen], [Victor San Kho Lin][victorskl], [Michael Macias][zaeleus] and [Roman Valls Guimera][brainstorm] (myself) has [been published in this repo and it is ready to use][htsget_rs] 🎉
 
