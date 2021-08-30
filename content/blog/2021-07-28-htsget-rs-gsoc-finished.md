@@ -1,5 +1,5 @@
 ---
-title: "GSoC 2021: htsget-rs"
+title: "GSoC 2021, GA4GH and htsget-rs"
 author: Roman Valls Guimera
 date: "2021-07-28"
 slug: htsget-rs
