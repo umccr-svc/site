@@ -30,7 +30,7 @@ At UMCCR, we use AWS to access the BAM and VCF files. Other ways of accessing da
 
 The URL to copy and paste on the box above is this: https://raw.githubusercontent.com/umccr/infrastructure/master/cdk/apps/igv/config/backend/prod/oauth-config.json.gz
 
-To operate the Amazon features, the easiest way is to use the [UMCCR Data Portal](https://data.umccr.org):
+To operate the Amazon features, the easiest way is to use the [UMCCR Data Portal](https://data.umccr.org)... if you work at UMCCR:
 
 ![umccr data portal open with igv](/img/2021/umccr_data_portal_open_igv.png)
 
