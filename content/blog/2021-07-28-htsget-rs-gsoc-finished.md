@@ -51,7 +51,7 @@ And future avenues for improvement are (but not limited to):
 1. Other cloud-native deployments to major public cloud vendors such as: Cloudflare, Google, Azure, etc...
 1. Other (cloud-native?) storage backends such as: Minio.
 1. Profiling and optimization: [cargo-flamegraphs](https://github.com/flamegraph-rs/flamegraph), [cargo-instruments](https://github.com/cmyr/cargo-instruments), etc...
-1. Additional http server implementations such as [Warp](https://docs.rs/warp/0.3.1/warp/), now only [actix-web](https://actix.rs/) is implemented but others can be built on top of the [http-core abstraction][https://github.com/umccr/htsget-rs/tree/main/htsget-http-core].
+1. Additional http server implementations such as [Warp](https://docs.rs/warp/0.3.1/warp/), now only [actix-web](https://actix.rs/) is implemented but others can be built on top of the [http-core abstraction](https://github.com/umccr/htsget-rs/tree/main/htsget-http-core).
 
 Now, if you want to see more [nitty-gritty details and ways to contribute][architecture_md], keep reading and see how Marko and Daniel implemented several of htsget-rs underpinnings.
 
@@ -92,7 +92,7 @@ One thing that prevents wider cloud-native adoption is formats that are not clou
 1. Big BAM/CRAM files throttle the througput of S3 object store transfers. Using more object-storage friendly storage backend could work much better with htsget and other bioinformatic analysis pipelines. 
 1. Where does htsget fit in the greater picture as a middleware between DRS, clients and other third party programs and hardware such as Illumina's DRAGEN and ICA service?
 
-[htsget_projjjtocol]: https://samtools.github.io/hts-specs/htsget.html
+[htsget_protocol]: https://samtools.github.io/hts-specs/htsget.html
 [aws_rust_lambdas_bioinfo]: https://umccr.org/blog/aws-bioinformatics-rust/
 [GSoC2021]: https://github.com/umccr/htsget-rs/projects/1
 [htsget_rs]: https://github.com/umccr/htsget-rs
