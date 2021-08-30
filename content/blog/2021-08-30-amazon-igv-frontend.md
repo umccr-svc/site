@@ -26,18 +26,18 @@ At UMCCR, we use AWS to access the BAM and VCF files. Other ways of accessing da
 2. If you are on a Mac, install with [Homebrew](http://brew.sh) with `brew cask install igv`. Alternatively, manually download from the official Broad site: https://software.broadinstitute.org/software/igv/download and **download only versions >=2.7.2, older releases will not work**.
 3. Use the following OAUTH provisioning URL in your IGV advanced preferences (`View->Preferences->Advanced->"OAuth provisioning URL"`), namely: 
 
-![igv provisioning url](../../static/img/2021/igv_provisioning_url.png)
+![igv provisioning url](/img/2021/igv_provisioning_url.png)
 
 The URL to copy and paste on the box above is this: https://raw.githubusercontent.com/umccr/infrastructure/master/cdk/apps/igv/config/backend/prod/oauth-config.json.gz
 
 To operate the Amazon features, the easiest way is to use the [UMCCR Data Portal](https://data.umccr.org):
 
-![umccr data portal open with igv](../../static/img/2021/umccr_data_portal_open_igv.png)
+![umccr data portal open with igv](/img/2021/umccr_data_portal_open_igv.png)
 
 Alternatively you can load tracks as described in [this tweet](https://twitter.com/braincode/status/1090446488071630849) from within IGV itself:
 
-![igv load s3 bucket menu](../../static/img/2021/igv_load_s3_bucket.jpeg)
-![igv s3 filetree](../../static/img/2021/igv_s3_filetree.jpg)
+![igv load s3 bucket menu](/img/2021/igv_load_s3_bucket.jpeg)
+![igv s3 filetree](/img/2021/igv_s3_filetree.jpg)
 
 ### Use dev environment (optional)
 
@@ -53,7 +53,7 @@ https://raw.githubusercontent.com/umccr/infrastructure/master/cdk/apps/igv/confi
 
 **Q**: When I try to install IGV I'm faced with a ["... can't be opened because Apple cannot check it for malicious software"](https://github.com/igvteam/igv/issues/713#issuecomment-542362787), such as:
 
-![igv gatekeeper error](../../static/img/2021/igv_gatekeeper_error.jpg)
+![igv gatekeeper error](/img/2021/igv_gatekeeper_error.jpg)
 
 **Q:** I cannot see the Amazon menu on my IGV, what's wrong?
 
