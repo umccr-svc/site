@@ -1,10 +1,10 @@
 ---
-title: "Global Alliance for Genomics and Health GSoC 2021: htsget-rs"
+title: "GSoC 2021: htsget-rs"
 author: Roman Valls Guimera
 date: "2021-07-28"
 slug: htsget-rs
 layout: post
-permalink: https://umccr.org/blog/2020/07/28/htsget-rs
+permalink: https://umccr.org/blog/2021/07/28/htsget-rs
 categories:
   - rust
   - htsget
