@@ -20,6 +20,8 @@ tags:
 summary: "Google Summer of Code 2021 with GA4GH: A pure Rust htsget implementation is born"
 ---
 
+TL;DR: [https://github.com/umccr/htsget-rs][htsget_rs]
+
 ## GSoC 2021 and htsget-rs
 
 The [Rust htsget server][htsget_rs] that was sketched [a few months ago at UMCCR][aws_rust_lambdas_bioinfo] has been put together thanks to GA4GH's [generous allocation of 2 students to work on this effort][GSoC2021] to nourish the Rust bioinformatics ecosystem while delivering a GA4GH driver technology implementation [such as the htsget protocol][htsget_protocol].
