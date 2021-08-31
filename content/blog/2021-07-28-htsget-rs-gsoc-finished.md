@@ -35,7 +35,7 @@ To sum up, this project has:
 
 1. Implemented all major bioinformatic formats that htsget supports: VCF, BCF, BAM and CRAM... along with their corresponding indices. Non-bioinfo savvy readers: [get acquainted with some of those formats here](https://www.youtube.com/watch?v=MrVpn0vpIYU).
 1. Tested and reported bugs to a crucially important underlying Rust library: [Noodles][noodles].
-1. Added a local http server that can be spawned for testing or on-premise deployment purposes.
+1. Added a [local htsget (http) server](https://github.com/umccr/htsget-rs/blob/main/htsget-http-actix/README.md) that can be spawned for testing or on-premise deployment purposes.
 1. Created a [benchmark suite to spot performance regressions and compare against other third party implementations][benchmarks_pr].
 1. Code reviewed implementations, documentation on architecture and operation, including functional and integration tests.
 1. Prompted third party genome viewers to [properly support GA4GH's htsget specification in their implementations](https://github.com/igvteam/igv/pull/850).
@@ -44,7 +44,7 @@ Also, to be clear, there's work to be finished up:
 
 1. Proper local testing and deployment **for AWS lambdas**. Unfortunately there's [a chain of upstream AWS dependencies that need to be fixed first][aws-sam-cli-local-lambda]. To clarify, Rust lambdas can be deployed with SAM but not tested locally, which makes local development/deploy iterations too cumbersome to be practical at the time of writing this.
 1. [S3 storage backend, supporting "non-immediately" accessible storage tiers such as AWS Glacier or Deep Archive](https://github.com/umccr/htsget-rs/issues/9).
-1. DRS compatible object ID resolver, to improve integration of other GA4GH-standardized information retrieval mechanisms.
+1. [DRS compatible object ID resolver](https://www.ga4gh.org/news/drs-api-enabling-cloud-based-data-access-and-retrieval/), to improve integration of other GA4GH-standardized information retrieval mechanisms.
 
 And future avenues for improvement are (but not limited to):
 
@@ -78,6 +78,8 @@ With all major bioinformatics formats that htsget supports in its spec implement
 Furthermore, htsget needs some middleware that disambiguates names and locations of particular datasets, and that's what Daniel fixed with his [regex-based id-resolver](https://github.com/umccr/htsget-rs/pull/60), as the GA4GH reference implementation does. In the future, other data/id resolver mechanisms should be implemented for better interoperability with different research institutes, industry and other htsget users at large.
 
 Lastly, Daniel is working on [adding benchmarks](https://github.com/umccr/htsget-rs/pull/59) with the excellent [criterion-rs crate](https://bheisler.github.io/criterion.rs/book/index.html), which provides a good base for comparing our implementation with itself (across code changes) and against other third party implementations.
+
+<!-- TBD: Also, there's a gist for all of that described above ;) -->
 
 ## Future
 
