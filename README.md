@@ -5,7 +5,8 @@ IMPORTANT: Clone this repo with `--recursive`, otherwise the themes will not be 
 ```bash
 $ git clone --recursive https://github.com/umccr-svc/site
 ```
-
+## Add Author
+  
 ## Where to place my content
 
 Drop your `.md` files under `content/` and the images under `static/img/<YEAR>/<MONTH>`. Use common sense and use the already published content as a template.
