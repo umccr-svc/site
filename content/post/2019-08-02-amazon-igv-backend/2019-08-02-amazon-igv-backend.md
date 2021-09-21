@@ -6,7 +6,6 @@ authors:
 date: "2019-08-02"
 slug: igv-amazon-backend-setup
 layout: post
-permalink: https://umccr.org/blog/2019/08/02/igv-amazon-backend-setup
 categories:
  - bioinformatics 
  - infrastructure

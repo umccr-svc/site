@@ -5,7 +5,6 @@ authors:
 date: "2021-03-31"
 slug: aws-bioinformatics-rust 
 layout: post
-permalink: https://umccr.org/blog/2020/12/20/aws-bioinformatics-rust
 categories:
   - rust
 tags:

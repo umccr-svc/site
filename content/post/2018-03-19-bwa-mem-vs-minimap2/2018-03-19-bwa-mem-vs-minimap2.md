@@ -5,7 +5,6 @@ authors:
 date: "2018-03-19"
 slug: bwa-mem-vs-minimap2
 layout: post
-permalink: https://umccr.org/blog/2018/03/19/bwa-mem-vs-minimap2
 categories:
   - bioinformatics
 tags:

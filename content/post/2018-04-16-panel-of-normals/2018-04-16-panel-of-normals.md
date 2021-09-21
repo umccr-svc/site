@@ -5,7 +5,6 @@ authors:
 date: "2019-04-16"
 slug: panel-of-normals
 layout: post
-permalink: https://umccr.org/blog/2019/04/16/panel-of-normals
 categories:
   - bioinformatics
 tags:

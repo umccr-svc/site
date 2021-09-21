@@ -5,7 +5,6 @@ authors:
 date: "2019-05-09"
 slug: oncoviral-integration
 layout: post
-permalink: https://umccr.org/blog/2019/05/09/oncoviral-integration
 categories:
   - bioinformatics
 tags:

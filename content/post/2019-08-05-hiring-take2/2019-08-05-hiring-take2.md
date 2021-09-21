@@ -5,7 +5,6 @@ authors:
 date: "2019-08-05"
 slug: hiring-take2
 layout: post
-permalink: https://umccr.org/blog/2019/08/05/hiring-take2
 categories:
  - hiring
  - jobs

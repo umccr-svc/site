@@ -5,7 +5,6 @@ authors:
 date: "2019-02-16"
 slug: igv-amazon
 layout: post
-permalink: https://umccr.org/blog/2019/02/16/igv-amazon
 categories:
   - bioinformatics
   - infrastructure
