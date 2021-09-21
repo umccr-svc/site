@@ -20,13 +20,8 @@ TL;DR: https://github.com/igvteam/igv/pull/620
 
 In bioinformatics there's hardly anybody that hasn't come across the Broad Institute's venerable Java [Integrative Genomics Viewer][igv], if not, have [a peek at the original nature methods publication][igv_scihub]: it wouldn't be an overstatement to say that IGV is the samtools of genome visualization.
 
-<!--
-No resizing support for Markdown... sigh, I guess that a static image resizer/thumbnailer is needed here :/
 
-![igv google search](/img/2019/02/igv_everywhere.png)
--->
-
-<img src="/img/2019/02/igv_everywhere.png" alt="igv google search" width="640" height="300">
+{{< figure src="/img/2019/02/igv_everywhere.png" alt="igv google search" width="640" height="300" >}}
 
 
 Even [Google's deepvariant][deepvariant] used [IGV to validate their algorithms and learn about variants][igv-deepvariant-test]:
@@ -137,7 +132,7 @@ Now, we hear you say: why are we feeding Mr Bezos giant machine when we have loc
 
 Well, in some situations, uptime is not counted [in 9's][hpc_hahaha] but perhaps in **8's or 0's if you are lucky**... true story:
 
-<img src="/img/2019/02/hpc_uptime.png" alt="hpc uptimes and unscheduled maintenance windows" width="680" height="300">
+{{< figure src="/img/2019/02/hpc_uptime.png" alt="hpc uptimes and unscheduled maintenance windows" width="680" height="300" >}}
 
 We would like to think that bioinformatics is [transitioning towards consolidation, managed infrastructure that we can rely on][what_hplac_should_be] and paying the commercial cloud premium is a good way towards that reality. We would like to go forward where fighting ancient, barely funded tools and infrastructure are not the norm anymore, but instead modern, **integrated and robust workflows that gather metrics which allow increasing performance** enable or staff to aim higher in their science. As an end result, **tightening the loop between research question and results, iterating faster and overall having a better time as a researcher**.
 
