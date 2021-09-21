@@ -1,7 +1,7 @@
 ---
 # An instance of the Blank widget.
 # Documentation: https://wowchemy.com/docs/getting-started/page-builder/
-widget: blank
+widget: hero
 
 # Activate this widget? true/false
 active: true
@@ -26,7 +26,7 @@ design:
     image_size: cover
     text_color_light: true
   spacing:
-    padding: ["20px", "0", "20px", "0"]
+    padding: ["100px", "100", "100px", "100"]
 ---
 
 We develop community-driven, reusable approaches to process, analyse and aggregate large-scale sequencing data to improve cancer diagnostics and therapeutic choices.

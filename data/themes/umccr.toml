@@ -1,25 +1,19 @@
 # Theme metadata
 name = "umccr"
 
-# Is theme light or dark?
-light = true
-
 # Primary
-primary = "#81A1C1"
-primary_light = "#8FBCBB"
-primary_dark = "#5E81AC"
+primary = "#1565c0"
 
 # Menu
-menu_primary = "#4C566A"
-menu_text = "#ECEFF4"
-menu_text_active = "#81A1C1"
-menu_title = "#81A1C1"
+menu_primary = "#fff"
+menu_text = "#34495e"
+menu_text_active = "#454545"
+menu_title = "#2b2b2b"
 
-# Backgrounds
-background = "#ECEFF4"
-home_section_odd = "#E5E9F0"
-home_section_even = "#ECEFF4"
+# Home sections
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(247, 247, 247)"
 
-# Links
-link = "#5E81AC"
-link_hover = "#D08770"
+[dark]
+  link = "#bbdefb"
+  link_hover = "#bbdefb"

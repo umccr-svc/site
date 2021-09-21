@@ -11,7 +11,7 @@ main:
     url: about
     weight: 15
   - name: Blog
-    url: post
+    url: blog
     weight: 20
   - name: Opportunities
     url: work-with-us

@@ -5,7 +5,7 @@
 
 # Appearance
 
-theme: minimal
+theme: umccr
 day_night: false
 font: ''
 font_size: L
@@ -88,7 +88,7 @@ show_related:
 reading_time: true
 section_pager: false
 docs_section_pager: true
-sharing: true
+sharing: false
 copyright_license:
   enable: false
   allow_derivatives: false
@@ -142,7 +142,7 @@ marketing:
   baidu_tongji: ''
 cms:
   branch: master
-  local_backend: false
+  local_backend: true
 icon:
   pack:
     ai: true
