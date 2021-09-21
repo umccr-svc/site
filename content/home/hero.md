@@ -1,58 +1,32 @@
-+++
-# Hero widget.
-widget = "hero"  # See https://sourcethemes.com/academic/docs/page-builder/
-headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
-weight = 5  # Order that this section will appear.
+---
+# An instance of the Blank widget.
+# Documentation: https://wowchemy.com/docs/getting-started/page-builder/
+widget: hero
 
-title = ""
+# Activate this widget? true/false
+active: true
 
-# Hero image (optional). Enter filename of an image in the `static/img/` folder.
-hero_media = ""
+# This file represents a page section.
+headless: true
 
-[design.background]
-  # Apply a background color, gradient, or image.
-  #   Uncomment (by removing `#`) an option to apply it.
-  #   Choose a light or dark text color by setting `text_color_light`.
-  #   Any HTML color name or Hex value is valid.
+# Order that this section appears on the page.
+weight: 5
 
-  # Background color.
-  # color = "navy"
-  
-  # Background gradient.
-  gradient_start = "#4bb4e3"
-  gradient_end = "#2b94c3"
-  
-  # Background image.
-  image = "desktop.jpg"  # Name of image in `static/img/`.
-  image_darken = 0.4  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+title:
+subtitle:
 
-  # Text color (true=light or false=dark).
-  text_color_light = true
-
-# Call to action links (optional).
-#   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
-#   Remove a link/note by deleting a cta/note block.
-#[cta]
-#  url = "https://sourcethemes.com/academic/docs/install/"
-#  label = "Meet the team"
-#  icon_pack = "fas"
-#  icon = "download"
-  
-#[cta]
-#  url = "https://sourcethemes.com/academic/"
-#  label = "Meet the Team"
-
-#[cta_alt]
-#  url = "https://sourcethemes.com/academic/"
-#  label = "Work with Us"
-
-# Note. An optional note to show underneath the links.
-#[cta_note]
-#  label = '<a id="umccr-github" href="https://github.com/umccr">Github<!-- V --></a>'
-+++
+design:
+  # Choose how many columns the section has. Valid values: '1' or '2'.
+  columns: '1'
+  background:
+    image: desktop.jpg
+    image_darken: 0.4
+    image_parallax: true
+    image_position: center
+    image_size: cover
+    text_color_light: true
+  spacing:
+    padding: ["100px", "100", "100px", "100"]
+---
 
 We develop community-driven, reusable approaches to process, analyse and aggregate large-scale sequencing data to improve cancer diagnostics and therapeutic choices.
-
-
-
