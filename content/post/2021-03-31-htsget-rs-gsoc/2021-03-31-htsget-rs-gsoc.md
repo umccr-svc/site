@@ -33,7 +33,7 @@ This writeup patches most of those blogposts with a couple of recent development
 
 1. The latest, first officially released on crates.io, [aws-lambda-rust-runtime][aws_lambda_rust_runtime_github] **version 0.3.0** and why you don't need MUSL in your lambda builds anymore. **If you are interested in quickly adopting those changes, read the "New lambda runtime" section below.**
 1. Proposes an interesting BioIT project **for students**, that uses the tech described in this article. This is **paid by Google** if you are accepted on this year's [GSoC htsget-rs idea under the GA4GH organization][ga4gh_project_idea].
-1. On the bioinformatics front, we outline a serialization-deserialization (BioSerDe?) future where file formats get abstracted to allow easier experimentation with different storage and compute backends.
+1. On the bioinformatics front, we outline a [serialization-deserialization (BioSerDe?) future where file formats get abstracted](https://github.com/brainstorm/s3-rust-htslib-bam/commit/9e7a2002e3d31ac40c87bdad59a4af371b26518f#commitcomment-48795221) to allow easier experimentation with different storage and compute backends.
 
 So, without further ado, what's new in the AWS Rust serverless space?
 

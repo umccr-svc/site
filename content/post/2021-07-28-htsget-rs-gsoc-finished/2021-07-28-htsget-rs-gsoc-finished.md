@@ -89,7 +89,7 @@ Other than deploying htsget-rs on your own usecase, here's some unassorted TODOs
 
 1. [Implement Crypt4GH gotchas](https://github.com/umccr/htsget-rs/issues/34).
 1. Implement other ID resolvers, possibly integrating well with DRS.
-1. Implement other Storage backends, ideally leading to a BioSerDe crate, where all common cloud native formats are supported out of the box: Parquet, ORC, json.gz... to be able for compare against more custom designed storage representations such as pVCF, SAV and other upcoming formats that are proposed at GA4GH but that have relatively poor compatibility with the rest of the (big data) ecosystem and tooling found in today's commercial cloud systems.
+1. Implement other Storage backends, [ideally leading to a BioSerDe crate](https://github.com/zaeleus/noodles/issues/53#issuecomment-968506940), where all common cloud native formats are supported out of the box: Parquet, ORC, json.gz... to be able for compare against more custom designed storage representations such as pVCF, SAV and other upcoming formats that are proposed at GA4GH but that have relatively poor compatibility with the rest of the (big data) ecosystem and tooling found in today's commercial cloud systems.
 
 One thing that prevents wider cloud-native adoption is formats that are not cloud-native:
 
