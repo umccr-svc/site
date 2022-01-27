@@ -18,8 +18,9 @@ Led by Associate Professor [Oliver Hofmann](https://www.findanexpert.unimelb.edu
 
 ## The Team
 
-* Lavinia Gordon
+* Peter Diakumis
 * Oliver Hofmann
+* William Putra Intan
 * Sehrish Kanwal
 * Alexis Lucattini
 * Victor San Kho Lin
@@ -32,10 +33,10 @@ Led by Associate Professor [Oliver Hofmann](https://www.findanexpert.unimelb.edu
 
 
 ### Former Group Members
-
-* Peter Diakumis (MacArthur Lab)
+ 
 * Vlad Savelyev (MacArthur Lab)
 * Nick Clark (Elastic)
+* Lavinia Gordon (Bupa)
 
 
 ## The Centre for Cancer Research
