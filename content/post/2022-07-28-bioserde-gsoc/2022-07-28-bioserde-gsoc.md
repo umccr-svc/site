@@ -23,6 +23,8 @@ summary: "Google Summer of Code 2022 with GA4GH"
 
 TL;DR: Check out [BioSerDe][bioserde] and its accompanying [SerDe experiments with noodles-bed][umccr-noodles].
 
+![a_dna_sequencing_format_screaming_for_help_and_much_needed_change_by_salvador_dall_e](/img/2022/a_dna_sequencing_format_screaming_for_help_and_much_needed_change_by_salvador_dall-e.png)
+
 # GSoC 2022 and BioSerDe
 
 The BioSerDe project, initially idealized in a [noodles issue](https://github.com/zaeleus/noodles/issues/53) is [finally being worked on][bioserde] by UMMCR in partnership with GA4GH's proposal's on GSOC.
