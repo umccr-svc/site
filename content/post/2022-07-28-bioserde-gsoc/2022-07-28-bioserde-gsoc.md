@@ -27,9 +27,9 @@ TL;DR: Check out [BioSerDe][bioserde] and its accompanying [SerDe experiments wi
 
 # GSoC 2022 and BioSerDe
 
-The BioSerDe project, initially idealized in a [noodles issue](https://github.com/zaeleus/noodles/issues/53) is [finally being worked on][bioserde] by UMMCR in partnership with GA4GH's proposal's on GSOC.
+The BioSerDe project, initially idealized in a [noodles issue](https://github.com/zaeleus/noodles/issues/53) [has been worked on][bioserde] by UMMCR in partnership with GA4GH's proposal's on GSOC.
 
-It's being currently worked on by [Gabriel Simonetto](https://github.com/GabrielSimonetto) with the mentorship of [Roman Valls Guimera](https://github.com/brainstorm), [Michael Milton](https://github.com/multimeric) and [Marko Malenic](https://github.com/mmalenic).
+The project was developed by [Gabriel Simonetto](https://github.com/GabrielSimonetto) with the mentorship of [Roman Valls Guimera](https://github.com/brainstorm), [Michael Milton](https://github.com/multimeric) and [Marko Malenic](https://github.com/mmalenic).
 
 The mission is to have a safe and performant system to convert bioinformatics formats into alternative data representations.
 
@@ -37,7 +37,7 @@ The mission is to have a safe and performant system to convert bioinformatics fo
 
 How do we execute on that goal? Is it possible to build a rosetta stone that transforms, say, a [BAM file into Arrow data stream relatively effortlessly][discussion-output-formats]?
 
-In the 2 months of duration of the project, various experiments have been made, we started with [initial attempts using protobuf files](https://github.com/umccr/BioSerDe/issues/2), but then quickly realized we would be wasting a lot of potential, since this approach would force all formats to conform to a row-based representation.
+In the first 2 months of duration of the project, various experiments have been made, we started with [initial attempts using protobuf files](https://github.com/umccr/BioSerDe/issues/2), but then quickly realized we would be wasting a lot of potential, since this approach would force all formats to conform to a row-based representation.
 
 This then initiated [a discussion](https://github.com/umccr/BioSerDe/discussions/8) targeting which was the correct way to define said representation. From this discussion, we explored many different options ([1](https://github.com/umccr/BioSerDe/discussions/8#discussioncomment-2958136) [2](https://github.com/umccr/BioSerDe/pull/10) [3](https://github.com/umccr/BioSerDe/pull/11) [4](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=255a3600d1bf7b6935f5fe35a4354ccf)).
 
@@ -80,9 +80,7 @@ We think that this approach is worth exploring because SerDe is a very well unde
 
 1. Not being merged nor supported upstream by Noodles: To be fully clear, **this is not a "hostile" type of fork** by any stretch of the imagination. We aim at BioSerDe being used by bioinformaticians and data scientists at large and this is done by building community not dividing it. Exploring the feasibility of embedding SerDe into Noodles helps us figure out limitations and drawbacks we can solve, refactor or reconsider later on: **Perhaps [serde-remote](https://serde.rs/remote-derive.html) is all we need for our usecase at the end?**. Or maybe we'll see a [fitting trait architecture at the end of this journey][chris-zen-traits], paving the way for future contributions?
 1. When not used appropriatedly, [SerDe loads all bytes into memory][serde-streaming]. We know this is does not scale well within the multi-gigabyte bioinformatics file formats ecosystem. Instead, we need to convert between formats by streaming bytes from the underlying noodles structures. This could be eased by [serde-transcoding capabilities][serde-transcode] or any other attempts by third parties such as [tokio-serde][tokio-serde] or experiments with [postcard and async by James Munns][postcard-async] a format primarily designed for embedded targets.
-1. Unknown unknowns: we'll probably fill this up at the end of this GSoC edition with our learnings and insight.
-
-Tons to explore and implement! We're excited to see the outcomes of the second GSoC 2022 term.
+1. It's still needed some experimentation as to which is the best way to merge noodles functionality with serde functionality, maybe there is still a way to use serde-with from inside the serializers. Or maybe even with the hardships of implementing more intricate Serializers, it's still the best way to end up with performatic code. After this architecture is defined, discussions around the future of the crate should be resumed.
 
 ## Join us
 
