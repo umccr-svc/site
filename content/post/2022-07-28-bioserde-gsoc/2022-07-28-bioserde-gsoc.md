@@ -58,19 +58,19 @@ This gives us 2 options: using the noodles functionality inside the Serializer a
 
 Our initial research eventually found the [serde-with][serde-with] crate which has many functionalities, but most important to us, allows for a struct to [use its Display and FromStr](https://docs.rs/serde_with/2.0.1/serde_with/struct.DisplayFromStr.html) traits as serde behavior. This usage was very promising: it was suddenly very quick to implement serde [the plethora of BED definitions](https://github.com/umccr/noodles/blob/459015573c1c538f8b75cfa736f2876036f1c3d4/noodles-bed/src/de.rs#L126-L298) as each BED version can take care of it's own particularities. Even better is that `Display` and `FromStr` are well defined for the many noodles formats, which makes it so that this architecture will work well for them as well.
 
-[At this point](https://github.com/umccr/noodles/pull/2), we had serde functionality for all BED formats, as well as the serde_json custom representation. With these basic behavior working, it was time to look into how would a conversion between 2 formats look like.
+[At this point](https://github.com/umccr/noodles/pull/2), we had serde functionality for all BED formats, as well as the serde_json custom representation. With this basic behavior working, it was time to look into how would a conversion between 2 formats look like.
 
 ## Experimenting on conversions between two formats.
 As mentioned before, we had the goal of using [serde-transcode][serde-transcode] as our main tool of conversion, since the BioSerDe project has an interest in being memory efficient between conversions. 
 
-However, a quick inspection made us realize that [serde-transcode works by receiving only an `Serializer` and a `Deserializer`](https://github.com/umccr/noodles/pull/3/commits/67bbe84a2bb946796e464891e91e24346379d78f#diff-734a71c8c64780abff78dc27a3f49d2fff77e1b8d08270742e406c10b64d4979R40-R45) object, which is a problem, since our previous solution was reliant on passing a type annotation for serde-with to know which `Display` and `FromStr` implementation to use.
+However, a quick inspection made us realize that [serde-transcode works by receiving only a `Serializer` and a `Deserializer`](https://github.com/umccr/noodles/pull/3/commits/67bbe84a2bb946796e464891e91e24346379d78f#diff-734a71c8c64780abff78dc27a3f49d2fff77e1b8d08270742e406c10b64d4979R40-R45) object, which is a problem, since our previous solution was reliant on passing a type annotation for serde-with to know which `Display` and `FromStr` implementation to use.
 
 At this point, we had a decision to make: either, we drop serde-transcode, and make a custom function which uses internal memory allocation, in order to define a type that will be used in the process, or we need to go back on our architecture decision and find a way for the serializer and deserializer to produce BED valid entries inside the serialization and deserialization process, without the help of serde-with.
 
-An extensive discussion on this problem and decision can be found [here](https://github.com/umccr/noodles/pull/3)
+An extensive discussion on this problem and decision can be found [here](https://github.com/umccr/noodles/pull/3).
 
 ## Present
-And this is how the project is going at the moment, we are currently searching for ways to either call upon noodles functionalities from within the serializers. Ideally, all parsing should be done using already existing code, and that should be possible by [tracking the state of serialization](https://github.com/umccr/noodles/pull/2#discussion_r949969398), and calling the appropriate functions at the right times.
+And this is how the project is going at the moment, we are currently searching for ways to call upon noodles functionalities from within the serializers. Ideally, all parsing should be done using already existing code, and that should be possible by [tracking the state of serialization](https://github.com/umccr/noodles/pull/2#discussion_r949969398), and calling the appropriate functions at the right times.
 
 ## Future
 
@@ -80,7 +80,9 @@ We think that this approach is worth exploring because SerDe is a very well unde
 
 1. Not being merged nor supported upstream by Noodles: To be fully clear, **this is not a "hostile" type of fork** by any stretch of the imagination. We aim at BioSerDe being used by bioinformaticians and data scientists at large and this is done by building community not dividing it. Exploring the feasibility of embedding SerDe into Noodles helps us figure out limitations and drawbacks we can solve, refactor or reconsider later on: **Perhaps [serde-remote](https://serde.rs/remote-derive.html) is all we need for our usecase at the end?**. Or maybe we'll see a [fitting trait architecture at the end of this journey][chris-zen-traits], paving the way for future contributions?
 1. When not used appropriatedly, [SerDe loads all bytes into memory][serde-streaming]. We know this is does not scale well within the multi-gigabyte bioinformatics file formats ecosystem. Instead, we need to convert between formats by streaming bytes from the underlying noodles structures. This could be eased by [serde-transcoding capabilities][serde-transcode] or any other attempts by third parties such as [tokio-serde][tokio-serde] or experiments with [postcard and async by James Munns][postcard-async] a format primarily designed for embedded targets.
-1. It's still needed some experimentation as to which is the best way to merge noodles functionality with serde functionality, maybe there is still a way to use serde-with from inside the serializers. Or maybe even with the hardships of implementing more intricate Serializers, it's still the best way to end up with performatic code. After this architecture is defined, discussions around the future of the crate should be resumed.
+1. Some experimentation is still needed as to which is the best way to merge noodles functionality with serde functionality, maybe there is still a way to use serde-with from inside the serializers. Or maybe even with the hardships of implementing more intricate Serializers, it's still the best way to end up with performatic code. After this architecture is defined, discussions around the future of the crate should be resumed.
+
+Tons to explore and implement! We're excited to see where this goes.
 
 ## Join us
 
