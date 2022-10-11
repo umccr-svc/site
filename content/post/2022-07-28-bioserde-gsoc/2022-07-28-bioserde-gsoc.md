@@ -21,7 +21,7 @@ tags:
 summary: "Google Summer of Code 2022 with GA4GH"
 ---
 
-TL;DR: Check out [BioSerDe][bioserde] and its accompanying [SerDe experiments with noodles-bed][umccr-noodles].
+TL;DR: Check out [BioSerDe][bioserde] and its accompanying [Serde experiments with noodles-bed][umccr-noodles].
 
 ![a_dna_sequencing_format_screaming_for_help_and_much_needed_change_by_salvador_dall_e](/img/2022/a_dna_sequencing_format_screaming_for_help_and_much_needed_change_by_salvador_dall-e.png)
 
@@ -76,7 +76,7 @@ And this is how the project is going at the moment, we are currently searching f
 
 The intention of this fork is to experiment how an **ergonomic Serde implementation will fit within the intersection of Rust users and the bioinformatics community**.
 
-We think that this approach is worth exploring because SerDe is a very well understood crate within the Rust ecosystem and so (growingly) does noodles as a Rust alternative to htslib. We are also aware of the risks and upcoming challenges of taking this approach, namely: 
+We think that this approach is worth exploring because Serde is a very well understood crate within the Rust ecosystem and so (growingly) does noodles as a Rust alternative to htslib. We are also aware of the risks and upcoming challenges of taking this approach, namely: 
 
 1. Not being merged nor supported upstream by noodles: To be fully clear, **this is not a "hostile" type of fork** by any stretch of the imagination. We aim at BioSerDe being used by bioinformaticians and data scientists at large and this is done by building community not dividing it. Exploring the feasibility of embedding Serde into Noodles helps us figure out limitations and drawbacks we can solve, refactor or reconsider later on: **Perhaps [serde-remote](https://serde.rs/remote-derive.html) is all we need for our use case at the end?**. Or maybe we'll see a [fitting trait architecture at the end of this journey][chris-zen-traits], paving the way for future contributions?
 1. When not used appropriately, [Serde loads all bytes into memory][serde-streaming]. We know this is does not scale well within the multi-gigabyte bioinformatics file formats ecosystem. Instead, we need to convert between formats by streaming bytes from the underlying noodles structures. This could be eased by [serde-transcoding capabilities][serde-transcode] or any other attempts by third parties such as [tokio-serde][tokio-serde] or experiments with [postcard and async by James Munns][postcard-async], a format primarily designed for embedded targets.
