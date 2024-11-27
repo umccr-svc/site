@@ -4,7 +4,7 @@ authors:
   - marko-malenic
   - roman-valls-guimera
 date: "2024-11-27"
-slug: htsget-rs-complete
+slug: htsget-rs-crypt4gh
 layout: post
 categories:
   - rust
