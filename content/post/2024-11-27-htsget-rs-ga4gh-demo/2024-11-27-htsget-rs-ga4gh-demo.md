@@ -18,10 +18,15 @@ summary: "htsget-rs demo up and running at GA4GH"
 ---
 # GA4GH htsget+Crypt4GH demo
 
-Welcome to the first [htsget-rs](https://github.com/umccr/htsget-rs) public instance with Crypt4GH support, hosted by GA4GH proper:
+Welcome to the first [htsget-rs](https://github.com/umccr/htsget-rs) public instance with Crypt4GH support, hosted by GA4GH proper. Let's begin with a simple `curl` command:
+
+```
+% curl "https://htsget.ga4gh-demo.org/reads/service-info"
+```
+
+Which should yield the following JSON, please open [a htsget spec](https://samtools.github.io/hts-specs/htsget.html) browser tab on the side while you follow up:
 
 ```json
-% curl "https://htsget.ga4gh-demo.org/reads/service-info"
 {
   "id": "",
   "name": "GA4GH",
@@ -77,4 +82,4 @@ Our hope is that this public endpoint will facilitate much needed client impleme
 * [IGV.js](https://github.com/fathelen/crypt4ghJS)
 * [JBrowse2](https://github.com/GMOD/jbrowse/issues/1142)
 
-So this is a call library and client developers to test this htsget endpoint and report back!
+So this is a call library and client developers to test this htsget endpoint and [report back](https://github.com/umccr/htsget-rs/issues)!
