@@ -57,7 +57,7 @@ Which should yield the following JSON, please open [a htsget spec](https://samto
 }
 ```
 
-Developers can now go and test the following endpoints with for BAM and other formats ([example files deployed from our htsget-рs data folder](https://github.com/umccr/htsget-rs/tree/main/data):
+Developers can now go and test the following endpoints with BAM and other formats ([example files deployed from our htsget-рs data folder](https://github.com/umccr/htsget-rs/tree/main/data):
 
 ```sh
 % curl "https://htsget.ga4gh-demo.org/reads/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/bam/htsnexus_test_NA12878"
@@ -82,4 +82,4 @@ Our hope is that this public endpoint will facilitate much needed client impleme
 * [IGV.js](https://github.com/fathelen/crypt4ghJS)
 * [JBrowse2](https://github.com/GMOD/jbrowse/issues/1142)
 
-So this is a call library and client developers to test this htsget endpoint and [report back](https://github.com/umccr/htsget-rs/issues)!
+So this is a call for library and client developers to test this htsget endpoint and [report back](https://github.com/umccr/htsget-rs/issues)!
