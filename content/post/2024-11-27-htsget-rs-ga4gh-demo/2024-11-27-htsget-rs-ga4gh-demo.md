@@ -57,7 +57,7 @@ Which should yield the following JSON, please open [a htsget spec](https://samto
 }
 ```
 
-Developers can now go and test the following endpoints with BAM and other formats ([example files deployed from our htsget-рs data folder](https://github.com/umccr/htsget-rs/tree/main/data):
+Developers can now go and test the following endpoints with BAM and other formats ([example files deployed from our htsget-рs data folder](https://github.com/umccr/htsget-rs/tree/main/data)):
 
 ```sh
 % curl "https://htsget.ga4gh-demo.org/reads/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/bam/htsnexus_test_NA12878"
@@ -71,7 +71,7 @@ Check out the Crypt4GH encrypted BAM payload example file:
 
 The payload can be decrypted with the test public/private keypair available on the official htsget-rs repo:
 
-[https://github.com/umccr/htsget-rs/tree/main/data/c4gh][https://github.com/umccr/htsget-rs/tree/main/data/c4gh]
+[https://github.com/umccr/htsget-rs/tree/main/data/c4gh](https://github.com/umccr/htsget-rs/tree/main/data/c4gh)
 
 Please read the included `README.md` keygen/encrypt/decrypt walkthrough for more details on how to work with those files.
 
