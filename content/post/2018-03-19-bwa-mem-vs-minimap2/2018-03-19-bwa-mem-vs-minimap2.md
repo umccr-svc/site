@@ -1,7 +1,7 @@
 ---
 title: "BWA-MEM vs Minimap2: WGS somatic variant calling"
 authors: 
-  - vlad-saveliev
+  - vlad-savelyev
 date: "2018-03-19"
 slug: bwa-mem-vs-minimap2
 layout: post

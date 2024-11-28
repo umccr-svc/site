@@ -1,7 +1,7 @@
 ---
 title: "Panel of normals"
 authors: 
-  - vlad-saveliev
+  - vlad-savelyev
 date: "2019-04-16"
 slug: panel-of-normals
 layout: post
