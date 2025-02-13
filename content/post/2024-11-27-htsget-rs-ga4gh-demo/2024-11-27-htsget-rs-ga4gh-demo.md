@@ -61,13 +61,13 @@ Which should yield the following JSON, please open [a htsget spec](https://samto
 Developers can now go and test the following endpoints with BAM and other formats ([example files deployed from our htsget-рs data folder](https://github.com/umccr/htsget-rs/tree/main/data)):
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/reads/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/bam/htsnexus_test_NA12878"
+curl "https://htsget.ga4gh-demo.org/reads/htsnexus_test_NA12878"
 ```
 
-Check out the Crypt4GH encrypted BAM payload example file:
+Check out the Crypt4GH encrypted BAM payload example file, note the **experimental** `encryptionScheme=` parameter, [subject to change and in active discussion by the GA4GH htsget committee](https://github.com/samtools/hts-specs/pull/808):
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/reads/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/c4gh/htsnexus_test_NA12878"
+curl "https://htsget.ga4gh-demo.org/reads/htsnexus_test_NA12878?encryptionScheme=C4GH"
 ```
 
 The payload can be decrypted with the test public/private keypair available on the official htsget-rs repo:
@@ -79,13 +79,13 @@ Please read the included `README.md` keygen/encrypt/decrypt walkthrough for more
 CRAM files can be queried by specifying `?format=CRAM` on the reads endpoint:
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/reads/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/cram/htsnexus_test_NA12878?format=CRAM"
+curl "https://htsget.ga4gh-demo.org/reads/htsnexus_test_NA12878?format=CRAM"
 ```
 
 And the equivalent Crypt4GH encrypted CRAM:
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/reads/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/c4gh/htsnexus_test_NA12878?format=CRAM"
+curl "https://htsget.ga4gh-demo.org/reads/htsnexus_test_NA12878?format=CRAM&encryptionScheme=C4GH"
 ```
 
 Similar to the `/reads` endpoint, `/variants` is also supported for VCF and BCF files:
@@ -97,25 +97,25 @@ curl "https://htsget.ga4gh-demo.org/variants/service-info"
 For example, to fetch the VCF example file, try:
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/variants/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/vcf/spec-v4.3"
+curl "https://htsget.ga4gh-demo.org/variants/spec-v4.3"
 ```
 
 Or, the same Crypt4GH encrypted VCF can be fetched with:
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/variants/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/c4gh/spec-v4.3"
+curl "https://htsget.ga4gh-demo.org/variants/spec-v4.3?encryptionScheme=C4GH"
 ```
 
 BCF files can be obtained by specifying `?format=BCF` on the variants endpoint. To get the example BCF:
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/variants/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/bcf/sample1-bcbio-cancer?format=BCF"
+curl "https://htsget.ga4gh-demo.org/variants/sample1-bcbio-cancer?format=BCF"
 ```
 
 Or, the Crypt4GH encrypted BCF:
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/variants/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/c4gh/sample1-bcbio-cancer?format=BCF"
+curl "https://htsget.ga4gh-demo.org/variants/sample1-bcbio-cancer?format=BCF&encryptionScheme=C4GH"
 ```
 
 All the queries above that fetch data (excluding the service-info endpoint) support parameters which can restrict the
@@ -124,25 +124,25 @@ regions returned.
 For example, to query a specific reference name with start and end positions, try:
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/reads/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/bam/htsnexus_test_NA12878?referenceName=1&start=1000&end=2000"
+curl "https://htsget.ga4gh-demo.org/reads/htsnexus_test_NA12878?referenceName=1&start=1000&end=2000"
 ```
 
 Or, with the variants endpoint:
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/variants/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/vcf/spec-v4.3?referenceName=20&start=0&end=100"
+curl "https://htsget.ga4gh-demo.org/variants/spec-v4.3?referenceName=20&start=0&end=100"
 ```
 
 This also works with Crypt4GH files, and it means that only specific regions that match the query will be returned:
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/reads/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/c4gh/htsnexus_test_NA12878?referenceName=1&start=1000&end=2000"
+curl "https://htsget.ga4gh-demo.org/reads/htsnexus_test_NA12878?referenceName=1&start=1000&end=2000"
 ```
 
 Or, with the Crypt4GH VCF file:
 
 ```sh
-curl "https://htsget.ga4gh-demo.org/variants/htsgetlambdastack-bucket83908e77-0bbbuwy4lrax/c4gh/spec-v4.3?referenceName=20&start=0&end=100"
+curl "https://htsget.ga4gh-demo.org/variants/spec-v4.3?referenceName=20&start=0&end=100&encryptionScheme=C4GH"
 ```
 
 Our hope is that this public endpoint will facilitate much needed client implementations for Crypt4GH decryption, to name a few in no particular order:
