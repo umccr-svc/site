@@ -4,7 +4,7 @@ authors:
   - marko-malenic
   - roman-valls-guimera
 date: "2024-11-27"
-lastmod: "2025-02-13"
+lastmod: "2025-02-14"
 slug: htsget-rs-crypt4gh
 layout: post
 categories:
@@ -29,17 +29,21 @@ Which should yield the following JSON, please open [a htsget spec](https://samto
 
 ```json
 {
-  "id": "",
-  "name": "GA4GH",
-  "version": "0.1",
+  "createdAt": "2025-02-13T21:50:40.515058363+00:00",
+  "version": "0.6.0",
   "organization": {
-    "name": "GA4GH",
-    "url": "https://ga4gh.org/"
+    "name": "",
+    "url": ""
   },
+  "updatedAt": "2025-02-13T21:50:40.515060644+00:00",
+  "documentationUrl": "https://github.com/umccr/htsget-rs",
+  "id": "htsget-lambda/0.6.0",
+  "name": "htsget-lambda",
+  "description": "A cloud-based instance of htsget-rs using AWS Lambda, which serves data according to the htsget protocol.",
   "type": {
-    "group": "",
-    "artifact": "",
-    "version": ""
+    "group": "org.ga4gh",
+    "artifact": "htsget",
+    "version": "1.3.0"
   },
   "htsget": {
     "datatype": "reads",
@@ -49,12 +53,7 @@ Which should yield the following JSON, please open [a htsget spec](https://samto
     ],
     "fieldsParametersEffective": false,
     "tagsParametersEffective": false
-  },
-  "contactUrl": "https://ga4gh.org/",
-  "documentationUrl": "https://github.com/umccr/htsget-rs",
-  "createdAt": "",
-  "updatedAt": "",
-  "environment": "dev"
+  }
 }
 ```
 
