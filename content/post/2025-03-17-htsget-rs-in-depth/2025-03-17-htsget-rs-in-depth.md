@@ -4,7 +4,7 @@ authors:
   - marko-malenic
   - roman-valls-guimera
 date: "2025-03-17"
-slug: htsget-rs-details
+slug: htsget-rs-in-depth
 layout: post
 categories:
   - rust
