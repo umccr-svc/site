@@ -149,7 +149,7 @@ Then, query like before, except add the `encryptionScheme` parameter:
 curl "https://htsget.ga4gh-demo.org/reads/htsnexus_test_NA12878?class=header&encryptionScheme=C4GH"
 ```
 
-This is an experimental parameter that htsget-rs supports.
+This is an experimental parameter that htsget-rs supports but is not yet part of the htsget spec.
 
 This will return a JSON that contains encrypted data when concatenated. Here, there are additional URLs that are base64
 encoded. These URLs represent inline data to the JSON ticket, and just need to be decoded to obtain the bytes. They
