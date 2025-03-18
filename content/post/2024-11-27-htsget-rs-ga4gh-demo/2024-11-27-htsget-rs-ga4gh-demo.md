@@ -4,7 +4,7 @@ authors:
   - marko-malenic
   - roman-valls-guimera
 date: "2024-11-27"
-lastmod: "2025-02-14"
+lastmod: "2025-03-17"
 slug: htsget-rs-crypt4gh
 layout: post
 categories:
@@ -57,7 +57,7 @@ Which should yield the following JSON, please open [a htsget spec](https://samto
 }
 ```
 
-Developers can now go and test the following endpoints with BAM and other formats ([example files deployed from our htsget-рs data folder](https://github.com/umccr/htsget-rs/tree/main/data)):
+Developers can now go and test the following endpoints with BAM and other formats ([example files deployed from our htsget-rs data folder](https://github.com/umccr/htsget-rs/tree/main/data)):
 
 ```sh
 curl "https://htsget.ga4gh-demo.org/reads/htsnexus_test_NA12878"
