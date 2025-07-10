@@ -3,6 +3,7 @@ title: "IGV frontend (desktop client) setup"
 authors: 
   - roman-valls-guimera 
 date: "2021-08-30"
+lastmod: "2025-07-10"
 slug: igv-amazon-frontend-setup
 layout: post
 categories:
@@ -84,3 +85,7 @@ https://raw.githubusercontent.com/umccr/infrastructure/master/cdk/apps/igv/confi
 **Q:** `ERROR [2019-09-26T11:21:33,975]  [CommandListener.java:140] [Thread-3]  java.net.BindException: Address already in use: NET_Bind`
 
 **A:** Do you have another IGV process/session running in parallel? Close it. Still not working? Reboot your computer.
+
+**Q:** "The genome 'Human (hg38) could not be read"
+![genome_error](/img/2021/genome_error.png)
+**A:** There's a potential configuration migration issue, delete IGV's user folder, typically called **igv** in your `$HOME` and configure your organization's OAuth access as outlined in the beginning of this blogpost.
