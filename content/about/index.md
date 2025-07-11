@@ -2,10 +2,8 @@
 title: "About Us"
 author: Oliver Hofmann
 date: "2020-12-20"
-#slug: about
+lastmod: "2025-07-11"
 layout: post
-#categories:
-#  - bioinformatics
 tags:
   - bioinformatics
   - about
@@ -26,17 +24,19 @@ Led by Associate Professor [Oliver Hofmann](https://www.findanexpert.unimelb.edu
 * Victor San Kho Lin
 * Helen Mitchell
 * Florian Reisinger
-* Roman Valls
+* Roman Valls Guimera
 * Stephen Watts
+* Marko Malenic
 
 ![](/img/stairs.jpg)
 
 
 ### Former Group Members
- 
-* Vlad Savelyev (MacArthur Lab)
+
+* Vlad Savelyev (Sequera Labs)
+* Arthur Hsu (CSL)
 * Nick Clark (Elastic)
-* Lavinia Gordon (Bupa)
+* Lavinia Gordon (Australian Government)
 
 
 ## The Centre for Cancer Research
