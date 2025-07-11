@@ -10,9 +10,6 @@ main:
   - name: Blog
     url: blog
     weight: 20
-  - name: Opportunities
-    url: work-with-us
-    weight: 25
   - name: Code of Conduct
     url: code
     weight: 30
